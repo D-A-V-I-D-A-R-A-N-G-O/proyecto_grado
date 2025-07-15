@@ -1,12 +1,14 @@
 /* --jet: #303036ff;
 --process-cyan: #30bcedff;
 --ghost-white: #fffaffff;
---tomato: #fc5130ff;
+--tomato: #fc5130ff; 
 --black: #050401ff; */
+
 body{
     padding: 0%;
     margin: 0%;
     background-color: #30BCED;
+    color:  #fffaffff;
 }
 #logo{
      width: 130px;

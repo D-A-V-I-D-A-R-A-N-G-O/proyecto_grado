@@ -9,8 +9,7 @@
 <body>
     <div id="cabeza">
         <div id="bobo"></div>
-                <img src="../EL ALMANAQUE RANDOM.PNG" alt="logo" id="logo">
-
+                <img src="../logo.png" alt="logo" id="logo">
        <div id="menu">
         <h3><a id="boton" href="../index.html">Inicio</a></h3>
         <h3>            <a id="boton" href="./Personajes.html">Personajes</a></h3>
@@ -18,6 +17,21 @@
         <h3>            <a id="boton" href="./Nosotros.html">Nosotros</a></h3>
         </div>
     </div>
-<div id="Edicion"></div>
+<div id="Edicion">
+     <div id="arriva">
+    <h1 id="titulo" >EL ALMANAQUE RANDOM</h1>
+    <select name="listapersonajes" id="lista"class="select" onchange="reciBir()"></select>
+        <button id="crear" onclick="cRear()">CREAR</button>
+    </div>
+    
+    <div id="todo">
+    <div id="personaje-container"></div>
+    <div id="formularioo"></div>
+    </div>
+    
+    <link rel="stylesheet" href="../css/edicion.css">
+
+</div>
+<script src="../js/edicion.js"></script>
 </body>
 </html>
