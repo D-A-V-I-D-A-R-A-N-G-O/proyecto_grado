@@ -1,6 +1,6 @@
 async function obtenerPersonajes() {
     try {
-        const response = await fetch('https://181.133.27.242/API/personajes');
+        const response = await fetch('http://181.133.27.242:8080/API/personajes');
         const data = await response.json();
         const personajesContainer = document.getElementById('personajes-container');
         console.log(data); 

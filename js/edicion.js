@@ -1,9 +1,9 @@
 async function obtenerlistaPersonajes() {
   try {
-      const response = await fetch('https://181.133.27.242/API/personajes');
+      const response = await fetch('http://181.133.27.242:8080/API/personajes');
       const data = await response.json();
       const listaContainer = document.getElementById('lista');
-      listaContainer.innerHTML = '';  
+      listaContainer.innerHTML = ' <option value="">Seleccione</option>';  
       data.forEach(personaje => {
           const personajeElement = document.createElement('option');
           personajeElement.value = personaje.id;
@@ -23,7 +23,7 @@ function reciBir() {
     let idPersonaje = document.getElementById('lista').value
     
     try {
-      fetch('https://181.133.27.242/API/personajes/'+ idPersonaje)
+      fetch('http://181.133.27.242:8080/API/personajes/'+ idPersonaje)
     .then(respuesta => respuesta.json())
     .then(datos => {
       document.getElementById('formularioo').style.display = 'none';
@@ -58,7 +58,7 @@ function eDitar() {
   let idPersonaje = document.getElementById('lista').value 
     
     try {
-      fetch('https://181.133.27.242/API/personajes/'+ idPersonaje)
+      fetch('http://181.133.27.242:8080/API/personajes/'+ idPersonaje)
     .then(respuesta => respuesta.json())
     .then(datos => {
       
@@ -86,7 +86,7 @@ function eDitar() {
   function moDificar() {
     let idPersonaje = document.getElementById('lista').value
      
-          fetch('https://181.133.27.242/API/personajes/'+ idPersonaje, {
+          fetch('http://181.133.27.242:8080/API/personajes/'+ idPersonaje, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ function eDitar() {
       async function cRear() {      
         try {
            
-            const response = await fetch('https://181.133.27.242/API/personajes');
+            const response = await fetch('http://181.133.27.242:8080/API/personajes');
             const data = await response.json();
            
             document.getElementById('formularioo').innerHTML =    
@@ -149,7 +149,7 @@ function eDitar() {
               return alert('Todos los campos son obligatorios');
           }
 
-            const response = await fetch('https://181.133.27.242/API/personajes', {
+            const response = await fetch('http://181.133.27.242:8080/API/personajes', {
               
                 method: 'POST',
                 headers: {
@@ -177,7 +177,7 @@ function eDitar() {
 async function eLiminar() {
   let Pepe = document.getElementById('lista').value
    try {
-    const response = await fetch('https://181.133.27.242/API/personajes/'+Pepe, {
+    const response = await fetch('http://181.133.27.242:8080/API/personajes/'+Pepe, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
