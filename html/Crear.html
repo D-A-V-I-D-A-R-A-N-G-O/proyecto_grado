@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
         <link rel="stylesheet" href="../css/Navegacion.css">
-    <link rel="stylesheet" href="../css/personajes.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Almanaque Random</title>
@@ -11,7 +10,6 @@
     <div id="cabeza">
         <div id="bobo"></div>
                 <img src="../logo.png" alt="logo" id="logo">
-
        <div id="menu">
         <h3><a id="boton" href="../index.html">Inicio</a></h3>
         <h3>            <a id="boton" href="./Personajes.html">Personajes</a></h3>
@@ -19,9 +17,22 @@
         <h3>            <a id="boton" href="./Nosotros.html">Nosotros</a></h3>
         </div>
     </div>
-<div id="Personajes">
-    <div id="personajes-container"></div>
+<div id="Crear">
+    <div id="formulario">
+        <h2>personaje nuevo</h2>
+                  <h2>Nombre</h2>
+                  <input type="text" id="nombre" placeholder="NOMBRE">
+                  <h2>Alimentación</h2>
+                  <input type="text" id="apodo" placeholder="APODO">
+                  <h2>Viene</h2>
+                  <input type="text" id="descripcion"  placeholder="DESCRIPCION">
+                  <h2>URL de la imagen</h2>
+                  <input type="text" id="imgUrl" placeholder="URL DE IMAGEN">
+    </div>
+    <div id="imagen"> </div>
+    <button onclick="mAke()" id="guardar">Guardar</button>
+
 </div>
+<script src="../js/funciones.js"></script>
 </body>
-<script src="../js/personajes.js"></script>
 </html>

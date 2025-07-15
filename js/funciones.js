@@ -1,3 +1,20 @@
+async function obtenerPersonajes() {
+    try {
+        const response = await fetch('http://181.133.27.242:8080/API/personajes');
+        const data = await response.json();
+        const personajesContainer = document.getElementById('botones');
+        console.log(data); 
+        data.forEach(personaje => {
+            const personajeElement = document.createElement('div');
+            personajeElement.classList.add('personaje');
+            personajeElement.innerHTML = 
+            `<button id="${personaje.id}">${personaje.nombre}</button>`;
+            personajesContainer.appendChild(personajeElement);
+        });
+    } catch (error) {
+        console.error("no se pudo hacer", error);
+    }
+}
 async function obtenerlistaPersonajes() {
   try {
       const response = await fetch('http://181.133.27.242:8080/API/personajes');
@@ -16,8 +33,6 @@ async function obtenerlistaPersonajes() {
       console.error("no se pudo hacer", error);
   }
 }
-window.onload = obtenerlistaPersonajes;
-
 
 function reciBir() { 
     let idPersonaje = document.getElementById('lista').value
@@ -192,3 +207,11 @@ async function eLiminar() {
 }
 }
   
+async function img() {
+  let imgUrl = document.getElementById("imgUrl")
+    if(imgUrl.value === null)
+      document.getElementById("imagen").innerHTML = '<p>No ha montado imagen</p>'
+    else {
+      document.getElementById("imagen").innerHTML = '<img src="${}" alt="logo" id="logo">'
+    }
+}
