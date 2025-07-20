@@ -61,7 +61,7 @@ async function obtenerPersonajes() {
         <div id="personaje-${personaje.id}" class="perso">
           <h2>${personaje.nombre}</h2>
           <div id="contenedor-img">
-            <img src="${personaje.imgUrl}" alt="${personaje.nombre}">
+            <img class="img" src="${personaje.imgUrl}" alt="${personaje.nombre}">
           </div>
           <h3>APODO: ${personaje.apodo}</h3>
           <h3>DESCRIPCIÓN: ${personaje.descripcion}</h3>
