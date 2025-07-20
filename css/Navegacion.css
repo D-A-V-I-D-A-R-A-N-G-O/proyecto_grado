@@ -9,6 +9,8 @@ body{
     margin: 0%;
     background-color: #30BCED;
     color:  #fffaffff;
+   font-family: monospace;
+
 }
 #logo{
      width: 130px;

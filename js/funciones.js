@@ -207,11 +207,23 @@ async function eLiminar() {
 }
 }
   
-async function img() {
-  let imgUrl = document.getElementById("imgUrl")
-    if(imgUrl.value === null)
+function img() {
+  try {
+    let imgUrl = document.getElementById("imgUrl")
+    console.log(imgUrl.value)
+   if(imgUrl.value === "")
       document.getElementById("imagen").innerHTML = '<p>No ha montado imagen</p>'
     else {
-      document.getElementById("imagen").innerHTML = '<img src="${}" alt="logo" id="logo">'
+      document.getElementById("imagen").innerHTML = `<img src="${imgUrl.value}" alt="logo" id="logo">`
     }
+  } catch (error) {
+        console.error("no se pudo hacer", error);    
+  }
 }
+
+function imagen() {
+  const imgUrl = document.getElementById("imgUrl")
+  imgUrl.addEventListener('input', img)
+}
+window.onload = imagen
+

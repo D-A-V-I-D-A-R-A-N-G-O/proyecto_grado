@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-        <link rel="stylesheet" href="../css/Navegacion.css">
+    <link rel="stylesheet" href="../css/Navegacion.css">
+    <link rel="stylesheet" href="../css/crear.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Almanaque Random</title>
@@ -18,21 +19,25 @@
         </div>
     </div>
 <div id="Crear">
-    <div id="formulario">
+    <form id="formulario">
         <h2>personaje nuevo</h2>
                   <h2>Nombre</h2>
-                  <input type="text" id="nombre" placeholder="NOMBRE">
-                  <h2>Alimentación</h2>
-                  <input type="text" id="apodo" placeholder="APODO">
-                  <h2>Viene</h2>
-                  <input type="text" id="descripcion"  placeholder="DESCRIPCION">
+                  <input type="text" id="nombre" placeholder="NOMBRE" maxlength="20" required>
+                  <h2>Apodo</h2>
+                  <input type="text" id="apodo" placeholder="APODO" maxlength="15" required>
+                  <h2>Descripcion</h2>
+                  <input type="text" id="descripcion"  placeholder="DESCRIPCION" required>
+                  <h2>Edad</h2>
+                  <input type="text" id="edad" placeholder="Edad" required>
                   <h2>URL de la imagen</h2>
-                  <input type="text" id="imgUrl" placeholder="URL DE IMAGEN">
+                  <input type="url" id="imgUrl" placeholder="URL DE IMAGEN" required>
+    </form>
+    <div id="imagen">
+        <h3>Imagen</h3>
+        <div id="contenedor-imagen"></div>
     </div>
-    <div id="imagen"> </div>
-    <button onclick="mAke()" id="guardar">Guardar</button>
-
 </div>
-<script src="../js/funciones.js"></script>
+    <button onclick="Crear()" id="guardar">Guardar</button>
+<script src="../js/crear.js"></script>
 </body>
 </html>
