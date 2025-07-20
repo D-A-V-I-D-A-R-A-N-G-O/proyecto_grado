@@ -1,13 +1,25 @@
-
+#personajes{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+#personajes-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .personaje {
     font: #FFFAFF;
-    margin: 5px;
+    margin: 10px;
     background-color: #fc5130ff;
     display: flex;
-    padding: 20px;
+    padding: 10px;
     justify-content: center;
-    align-items: center;
-    border-radius: 5px;
+    align-items:baseline;
+    border-radius: 10px;
+    width: 235px;
+    max-width: 280px;
+    max-height: 4000px;
 }
 #img{
     display: flex;
@@ -40,4 +52,13 @@ h1 {
     border-radius: 5px;
     text-align: center;
 
+}
+.personaje h2, h3 {
+    padding: 2px;
+}
+#img {
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 100%;
+    min-height: 100%;
 }

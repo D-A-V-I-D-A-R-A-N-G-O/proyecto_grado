@@ -11,7 +11,8 @@ async function obtenerPersonajes() {
             `<div>
                 <h2 id="nombre">${personaje.nombre}</h2>
                 <div id="img">
-                <img id="imgUrlS" src="${personaje.imgUrl}" alt="${personaje.nombre}"></div>
+                <img id="imgUrlS" src="${personaje.imgUrl}" alt="${personaje.nombre}">
+                </div>
                 <h3>APODO: ${personaje.apodo}</h3>
                 <h3>DESCRIPCION: ${personaje.descripcion}</h3>
                 <h3>EDAD: ${personaje.edad}<h3>
