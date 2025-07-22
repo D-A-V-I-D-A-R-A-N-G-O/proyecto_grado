@@ -5,7 +5,7 @@ function img() {
    if(imgUrl.value === "")
       document.getElementById("contenedor-imagen").innerHTML = '<p>No ha montado imagen</p>'
     else {
-      document.getElementById("contenedor-imagen").innerHTML = `<img src="${imgUrl.value}" alt="logo" id="logo">`
+      document.getElementById("contenedor-imagen").innerHTML = `<img src="${imgUrl.value}" alt="logo" id="pre-imagen">`
     }
   } catch (error) {
         console.error("no se pudo hacer", error);    
@@ -48,7 +48,7 @@ window.onload = imagen
     
             const datos = await response.json();
             console.log(datos);
-            window.location.replace("/proyecto_grado/html/Personajes.html")
+            window.location.replace("/html/Personajes.html")
           } catch (error) {
             console.error('No se pudo crear', error);
         }
