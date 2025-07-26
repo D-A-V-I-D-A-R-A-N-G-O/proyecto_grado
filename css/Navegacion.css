@@ -10,6 +10,7 @@ body{
     background-color: #30BCED;
     color:  #fffaffff;
    font-family: monospace;
+   padding-top: 120px;
 
 }
 #logo{
@@ -22,6 +23,9 @@ body{
     padding-top: 1px;                   
 }
 #cabeza{
+    position: fixed;
+    top: 0px;
+    width: 100%;
     font-family: monospace;
     display: flex;
     align-items: center;
