@@ -16,6 +16,8 @@ function imagen() {
   const imgUrl = document.getElementById("imgUrl")
   imgUrl.addEventListener('input', img)
 }
+
+
 window.onload = imagen
 
     async function Crear() {
@@ -30,7 +32,7 @@ window.onload = imagen
               return alert('Todos los campos son obligatorios');
           }
 
-            const response = await fetch('http://18.133.27.242:8080/API/personajes', {
+            const response = await fetch('http://181.133.27.242:8080/API/personajes', {
               
                 method: 'POST',
                 headers: {

@@ -13,13 +13,13 @@ body{
 
 }
 #logo{
-     width: 130px;
-     max-width: 100%;
+     max-width: 130px;
      min-width: none;
 }
 #menu{
     display: flex;
-    flex-wrap: wrap;                          
+    flex-wrap: wrap;       
+    padding-top: 1px;                   
 }
 #cabeza{
     font-family: monospace;
@@ -34,10 +34,19 @@ body{
 #cabeza h1{
     color: #FFFAFF;
 }
-#menu h3{
-    display: inline;
-    padding: 3px;
-    text-align:end;
+#menu a{
+    text-transform: uppercase;
+    width: 34%;
+    margin-top: 0.1px;
+    padding: 1%;
+    text-align: center;
+    max-width:150px;
+    border: 3px solid  #fffaffff;
+    border-radius: 5px;
+    margin: 0.5%;
+    text-decoration: none;
+    font-size: 200%;
+    color: #FFFAFF;
 }
 #menu{
     width: 100%;
@@ -45,35 +54,23 @@ body{
     justify-content: space-around;
     font-size: 10px;
 }
+#menu a:hover{
+    background-color: #30BCED;
+}
 
-@media (max-width: 400px) {
-    #cabeza{
-        flex-direction: row;
-    }
-    
-    #logo{ 
-        max-width: 100%;
-    }
+@media (max-width: 600px) {
     #menu{
-        text-align: center;
         display: flex;
+        text-align: center;
         flex-wrap: wrap;
         margin: 0;
-        font-size: 60%;
+        font-size: 50%;
         align-items: center;
         justify-content:space-evenly;
     }
-    #menu h3{
-        margin: 1px;
+    #logo{
+        max-width: 80px;
     }
-  
-}
-#menu a{
-    margin: 0.5%;
-    padding: 0.5%;
-    text-decoration: none;
-    font-size: 200%;
-    color: #FFFAFF;
 }
 
 

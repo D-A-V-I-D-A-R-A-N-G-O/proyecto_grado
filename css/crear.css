@@ -12,18 +12,16 @@
     align-items: center;
 }
 #formulario{
-    font: #FFFAFF;
-    margin: 10px;
-    background-color: #fc5130ff;
+ height: 500px;
+    width: 250px;
+    margin: 15px;
+    padding: 15px;
+    background-color: #FC5130;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    justify-content: center;
-    align-items:center;
+    text-align: center;
+    justify-content: space-around;
     border-radius: 10px;
-    width: 235px;
-    max-width: 280px;
-    max-height: 4000px;
 }
 #imagen h3{
     font-size: 150%;
@@ -37,19 +35,23 @@
     margin: 10px;
     min-height: 200px;
     min-width: 200px;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 350px;
+    max-height: 350px;
     background-color: #fc5130ff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 input{
-    background-color: 30BCED;
+    border-color: #30bcedff;
     border-radius: 5px;
-    border-style: double;
+    border-style:ridge;
 }
 #pre-imagen{
     border-radius: 10px;
     margin: 10px;
+    min-height: 200px;
+    min-width: 200px;
+    max-width: 300px;
+    max-height: 300px;
 }
