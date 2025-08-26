@@ -15,10 +15,13 @@
         <a id="boton" href="../index.html">Inicio</a>
         <a id="boton" href="./Personajes.html">Personajes</a>
         <a id="boton" href="./Crear.html">Crear</a>
-        <a id="boton" href="./Nosotros.html">Nosotros</a>
         </div>
 </header>
-<div id="Crear">
+<div id="botones">
+    <button id="make" onclick="Make()">CREAR PERSONAJE</button>
+    <button id="edit" onclick="Edit()">MODIFICAR PERSONAJE</button>
+</div>
+<div id="Crear" style="display: none;">
     <form id="formulario">
         <h2>Personaje Nuevo</h2>
                   <h2>Nombre</h2>
@@ -38,7 +41,12 @@
         <button onclick="Crear()" id="guardar">Guardar</button>
     </div>
 </div>
+<div id="Editar" style="display: none;">
+<div id="lista"><h1>jdjdjdjdjd</h1></div>
+</div>
 </body>
 <script src="../js/crear.js"></script>
+<script src="../js/BotonesCrear.js"></script>
+<script src="../js/modificar.js"></script>
 
 </html>
