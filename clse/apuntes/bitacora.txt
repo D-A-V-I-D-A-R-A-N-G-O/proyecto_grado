@@ -1,0 +1,6 @@
+28/08/2025: reestructuración del sitio web, con el fin de adaptaro a las necesidades planteadas por el SENA.
+Obj: un sitio web que permita la creacion de targetas de estudio, asi como su visualización por parte de los estudiantes. Solamente los usuarios con rango de maestro tendran permiso de eliminación y modificación con el fin de servirr como monitores de lo que se monta en el sitio.
+¿Que se hiso?
+1- bosquejado del proyecto.
+2- Estructuracion de carpetas del proyecto.
+3- creación de las nuevas secciones.
