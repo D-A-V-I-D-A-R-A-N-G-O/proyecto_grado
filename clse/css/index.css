@@ -1,16 +1,66 @@
-body{
-    background-color: #E6E6E9;   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
+
+body::before {
     
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://cdn.pixabay.com/photo/2018/05/21/09/47/post-it-3417757_960_720.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: blur(8px); /* Ajusta el valor según lo que necesites */
+    z-index: -1;
+}
+body {
+      font-family: monospace;
+
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 form{
-    max-width:2000px;
-    max-height:2000px;
+    font-size: 130%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    text-transform: uppercase;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 10%;
+    width: 250px;
+    height: 250px;
+    color: whitesmoke;
+    text-shadow: #124948 1px 1px 2px;
+    background: #17A65D;
+    background: linear-gradient(-45deg, rgba(23, 166, 93, 1) 30%, rgba(177, 231, 114, 1) 70%);   
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
 }
+#check {
+    margin-top: 10%;
+    background-color: #30bebc;
+    border-bottom: 2px solid #b1e772;
+}
+
+input{
+    font-size: 85%;
+    text-transform: uppercase;
+    color: #124948;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 5px;
+    border-color: #b1e772;
+    border: none;
+    background-color: #d9eec1;
+}
+input::placeholder{
+    color:#17a65d;
+}
+

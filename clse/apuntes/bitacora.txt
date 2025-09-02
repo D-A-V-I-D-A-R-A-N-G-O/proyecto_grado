@@ -5,12 +5,11 @@ Obj: un sitio web que permita la creacion de targetas de estudio, asi como su vi
 2- Estructuracion de carpetas del proyecto.
 3- creación de las nuevas secciones.
 4- Paleta de colores:
-Negro: #000000
-Gris medio: #BDBFC1
-Gris claro: #E2E2E8
-Gris muy claro: #E6E6E9
-Amarillo dorado: #F3B42D
-Fondo principal: Gris muy claro #E6E6E9
-Texto: Negro #000000
-Detalles y botones: Amarillo dorado #F3B42D
-Sombras/bordes: Gris medio #BDBFC1
+.color1 {color: #161a16;}
+.color2 {color: #124948;}
+.color3 {color: #17a65d;}
+.color4 {color: #b1e772;}
+.color5 {color: #f8efad;}
+2/09/2025: agregandole css al inicio.
+Imagenes posibles de fondo:
+https://i.blogs.es/ee0260/appsnotas/375_142.jpg
