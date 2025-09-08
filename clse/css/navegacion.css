@@ -7,7 +7,10 @@
 body{
     padding: 0%;
     margin: 0%;
-    background-color: #b1e772;
+    background-image: url("https://cdn.pixabay.com/photo/2018/01/29/13/03/internet-3116062_1280.jpg");
+      background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color:  #fffaffff;
    font-family: monospace;
    padding-top: 120px;
@@ -17,6 +20,20 @@ body{
      max-width: 130px;
      min-width: none;
 }
+#salir{
+     max-width: 90px;
+     min-width: none;
+     filter: invert(1);
+}
+#out{
+    padding: 0px;
+   border-radius: 600px;
+}
+#salir:hover{
+    background-color: rgb(0, 204, 255);
+    border-radius: 200px;
+}
+
 #menu{
     display: flex;
     flex-wrap: wrap;       
@@ -26,28 +43,33 @@ body{
     position: fixed;
     top: 0px;
     width: 100%;
-    font-family: monospace;
     display: flex;
     align-items: center;
     margin: 0px;
     padding: 5px;
     height: 100px;
-    background-color: #FC5130;
-    border-bottom: #FFFAFF;
+    background-color: #124948;
+    text-shadow: #000000 1px 1px 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid #b1e772;
+
 }
-#cabeza h1{
-    color: #FFFAFF;
-}
-#menu a{
+
+#boton{
+    display: flex;
+    align-content: center;
+    flex-direction: column-reverse;
+    justify-content: center;
     text-transform: uppercase;
     width: 34%;
     margin-top: 0.1px;
-    padding: 1%;
+margin: 0.5%;
+padding: 0.5%;
     text-align: center;
     max-width:150px;
     border: 3px solid  #fffaffff;
     border-radius: 5px;
-    margin: 0.5%;
     text-decoration: none;
     font-size: 200%;
     color: #FFFAFF;
@@ -59,7 +81,7 @@ body{
     font-size: 10px;
 }
 #menu a:hover{
-    background-color: #30BCED;
+    background-color: #258b8a;
 }
 
 @media (max-width: 600px) {
@@ -74,6 +96,9 @@ body{
     }
     #logo{
         max-width: 80px;
+    }
+    #salir{
+        max-width: 40px;
     }
 }
 
