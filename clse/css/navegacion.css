@@ -95,7 +95,7 @@ padding: 0.5%;
         justify-content:space-evenly;
     }
     #logo{
-        max-width: 80px;
+        display: none;
     }
     #salir{
         max-width: 40px;
