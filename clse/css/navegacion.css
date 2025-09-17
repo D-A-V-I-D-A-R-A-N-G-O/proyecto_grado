@@ -13,25 +13,23 @@ body{
     background-size: cover;
     color:  #fffaffff;
    font-family: monospace;
-   padding-top: 120px;
+   padding-top: 120%;
 
 }
 #logo{
      max-width: 9%;
      min-width: none;
 }
-#salir{
+#salir, #out{
      max-width: 10%;
      max-height: 10%;
      min-width: none;
      min-height: none;
      filter: invert(1);
-}
-#out{
+
     width: auto;
     height: auto;
-}
-#out{
+
     padding: 0px;
    border-radius: 600px;
 }
