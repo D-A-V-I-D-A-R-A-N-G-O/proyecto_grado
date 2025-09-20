@@ -17,7 +17,19 @@ body{
     height: 100vh;
 }
 #logo{
-    width: 13vh;
+    width: 8vw;
+    height: 8vh;
+    margin-top: 2vh;
+
+}
+#logos{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+     background-color: white;
+    border-radius: 600px;
+    height: 50px;
+    width: 50px;
 }
 #salir{
     filter: invert(1);
@@ -61,7 +73,8 @@ body{
     flex-direction: column-reverse;
     justify-content: center;
     text-transform: uppercase;
-    width: 14vh;
+    width: 19vw;
+    height: 8vh;
     text-align: center;
     border: 3px solid  #fffaffff;
     border-radius: 5px;
@@ -91,9 +104,6 @@ body{
     }
     #logo{
         display: none;
-    }
-    #salir{
-        max-width: 40px;
     }
 }
 

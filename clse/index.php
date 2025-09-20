@@ -1,3 +1,6 @@
+<?php
+    include("./funciones/connect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +15,12 @@
     </header>
 
    
-        <form action="">
+        <form action="./funciones/check.php" method="POST">
             <p>Ingresa el usuario</p>
-            <input id="user" type="number" maxlength="10" placeholder="usuario" required>
+            <input id="user" type="number" maxlength="10" placeholder="usuario" name="name" required>
             <p>Ingresa la contraseña</p>
-            <input id="password" type="password" maxlength="10" placeholder="contraseña" required>
-            <input type="submit" id="check">
+            <input id="password" type="password" maxlength="10" placeholder="contraseña" name="password" required>
+            <input type="submit" id="check"  name="entrar">
         </form>
 </body>
 </html>

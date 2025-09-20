@@ -1,5 +1,5 @@
 <?php
-//----------
+    include("./connect.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,10 +12,10 @@
     <div class="contenedor">
         <h1>Iniciar Sesión</h1>
 
-        <form> <!-- action="validar.php" method="POST" -->
+        <form action="check.php" method="POST">
             <label>
                 Nombre:<br>
-                <input type="text" name="nombre_registrado" required>
+                <input type="text" name="nombre" required>
             </label><br><br>
 
             <label>
@@ -29,7 +29,7 @@
 
             <label>
                 Contraseña:<br>
-                <input type="password" name="password_registrado" required>
+                <input type="password" name="password" required>
             </label><br><br>
 
             <button type="submit" name="entrar">Entrar</button>

@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
-    <link rel="stylesheet" href="../../css/navegacion.css">
+    <link rel="stylesheet" href="../css/navegacion.css">
 </head>
 <body>
         <header id="cabeza">
-        <div id="menu">
-            <div id="logos">
             <img id="logo" src="../../img/image.png" alt="">
-            </div>
+       <div id="menu">
         <a id="boton" href="./inicio.php">Inicio</a>
         <a id="boton" href="./tarjetas.php">Tarjetas</a>
         <a id="boton" href="./crear.php">Crear</a>
