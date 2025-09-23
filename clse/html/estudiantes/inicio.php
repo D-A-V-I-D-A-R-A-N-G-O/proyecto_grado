@@ -8,13 +8,14 @@
 </head>
 <body>
         <header id="cabeza">
+      <div id="menu">
+            <div id="logos">
             <img id="logo" src="../../img/image.png" alt="">
-       <div id="menu">
+            </div>
         <a id="boton" href="./inicio.php">Inicio</a>
         <a id="boton" href="./tarjetas.php">Tarjetas</a>
         <a id="boton" href="./crear.php">Crear</a>
         <a id="out" href="../../index.php"><img id="salir" src="../../img/logout.jpg" alt=""></a>
-        </div>
 </header>
    
 </body>

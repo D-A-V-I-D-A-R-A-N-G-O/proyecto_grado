@@ -1,10 +1,10 @@
 <?php
 
-$dbhost = "127.0.0.1";
+$dbhost = "181.133.27.242";
 $dbuser = "peewee1";
 $dbpass = "peewee";
 $dbname = "clse";
-$port = 3307;
+$port = 3306;
 
 
 $conexion = mysqli_connect ($dbhost, $dbuser, $dbpass, $dbname, $port);
