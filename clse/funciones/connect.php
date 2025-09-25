@@ -1,8 +1,15 @@
 <?php
 
-$dbhost = "181.133.27.242";
-$dbuser = "peewee1";
-$dbpass = "peewee";
+// $dbhost = "181.133.27.242";
+// $dbuser = "peewee1";
+// $dbpass = "peewee";
+// $dbname = "clse";
+// $port = 3306;
+
+
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
 $dbname = "clse";
 $port = 3306;
 
