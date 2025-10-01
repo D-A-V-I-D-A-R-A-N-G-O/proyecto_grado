@@ -1,17 +1,13 @@
 <?php
 
-// $dbhost = "181.133.27.242";
-// $dbuser = "peewee1";
-// $dbpass = "peewee";
-// $dbname = "clse";
-// $port = 3306;
-
-
 $dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "clse";
-$port = 3306;
+$dbuser = "lector";
+$dbpass = "LECTOR";
+$dbname = "clase";
+$port = 3307;
+
+
+
 
 
 $conexion = mysqli_connect ($dbhost, $dbuser, $dbpass, $dbname, $port);

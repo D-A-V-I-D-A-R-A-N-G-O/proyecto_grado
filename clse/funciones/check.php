@@ -5,7 +5,7 @@ include("connect.php");
     if (isset($_POST['entrar'])) {
         $nombre_temporal = mysqli_real_escape_string($conexion, $_POST["name"]);
         $password_temporal = mysqli_real_escape_string($conexion, $_POST["password"]);
-        $_sql = "SELECT * FROM users
+        $_sql = "SELECT * FROM usuarios
         WHERE ti = '$nombre_temporal' AND password = '$password_temporal' ";
         $resultado = mysqli_query($conexion, $_sql); 
 

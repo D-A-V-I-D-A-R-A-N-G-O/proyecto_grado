@@ -1,3 +1,6 @@
+<?php
+echo("<script>console.log('PHP: "   . $_SESSION ."');</script>");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

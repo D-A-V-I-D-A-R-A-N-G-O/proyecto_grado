@@ -23,5 +23,4 @@
             <input type="submit" id="check"  name="entrar">
         </form>
 </body>
-esta es una prueba
 </html>
