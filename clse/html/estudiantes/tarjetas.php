@@ -14,8 +14,8 @@ include("../../funciones/connect.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
     <link rel="stylesheet" href="../../css/navegacion.css">
-        <link rel="shortcut icon" href="../../img/image.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../css/targetas.css">
+    <link rel="shortcut icon" href="../../img/image.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/contenido.css">
 
 </head>
 <body>
