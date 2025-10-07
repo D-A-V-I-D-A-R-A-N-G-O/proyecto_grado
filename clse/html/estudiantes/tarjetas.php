@@ -1,7 +1,10 @@
 <?php 
-include("../../funciones/connect.php");
+    include("../../funciones/connect.php");
     session_start();
-
+  if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
+    header("Location: ../../index.php");
+    exit();
+}
     $sql = "SELECT * FROM flashcards WHERE id = 4";
     $resultado = mysqli_query($conexion, $sql);
     $fila = mysqli_fetch_assoc($resultado);
@@ -29,12 +32,12 @@ include("../../funciones/connect.php");
         <a id="boton" href="./crear.php">Crear</a>
         <a id="out" href="../../index.php"><img id="salir" src="../../img/logout.jpg" alt=""></a>
 </header>
-        <div id="contenido">
+        <section id="contenido">
             <h1>Bienvenido a la sección de Tarjetas</h1>
             <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
             <h1></h1>
             <p></p>
             <img src="<?php echo htmlspecialchars($fila['imgURL']) ?>" alt="">
-          </div>
+        </section>
 </body>
 </html>
