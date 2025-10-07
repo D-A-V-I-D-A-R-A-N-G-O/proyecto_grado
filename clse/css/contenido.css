@@ -1,5 +1,5 @@
 #contenido{
-    margin-top: 25vh;
+    margin-top: 13vh;
     display: flex;
     flex-direction: column;
      background-color: rgba(0, 0, 0, 0.5);
@@ -9,7 +9,4 @@
     color: whitesmoke;
     font-size: 200%;
     text-shadow: #124948 1px 1px 2px;
-}
-section{
-    
 }
