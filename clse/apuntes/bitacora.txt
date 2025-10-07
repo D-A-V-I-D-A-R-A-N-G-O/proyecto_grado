@@ -13,3 +13,7 @@ Obj: un sitio web que permita la creacion de targetas de estudio, asi como su vi
 2/09/2025: agregandole css al inicio.
 Imagenes posibles de fondo:
 https://i.blogs.es/ee0260/appsnotas/375_142.jpg
+
+Warning: Undefined variable $fila in C:\xampp\htdocs\proyecto_grado\clse\html\profesores\inicio.php on line 3
+
+Warning: Trying to access array offset on value of type null in C:\xampp\htdocs\proyecto_grado\clse\html\profesores\inicio.php on line 3

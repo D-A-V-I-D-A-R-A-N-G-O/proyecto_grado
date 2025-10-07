@@ -12,9 +12,18 @@ include("connect.php");
         if(mysqli_num_rows($resultado) == 1) {
             $fila = mysqli_fetch_assoc($resultado);
             session_start();
-            $_SESSION['nombre_usuario'] = $fila['name'];
-            header("Location: ../html/estudiantes/inicio.php");
-            exit();
+            if ($fila['rol'] == 'DOCENTE') {
+                $_SESSION['rol'] = $fila['rol'];
+                $_SESSION['name'] = $fila['name'];
+                $_SESSION['ti'] = $fila['ti'];
+            header("Location: ../html/profesores/inicio.php");
+            } elseif ($fila['rol'] == 'ALUMNO') {
+                $_SESSION['rol'] = $fila['rol'];
+                $_SESSION['name'] = $fila['name'];
+                $_SESSION['ti'] = $fila['ti'];
+                header("Location: ../html/estudiantes/inicio.php");
+            }
+            
         }else {
             echo "<script>
             alert('Usuario o contraseña incorrecta');
