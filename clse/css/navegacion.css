@@ -8,14 +8,14 @@ body{
     font-family: Arial, sans-serif;
     padding-top: 0%;
     margin: 0%;
-    background-image: url("https://cdn.pixabay.com/photo/2018/01/29/13/03/internet-3116062_1280.jpg");
+    /* background-image: url("https://cdn.pixabay.com/photo/2018/01/29/13/03/internet-3116062_1280.jpg"); */
+    background-image: url("../img/fonfo-estudiantes.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color:  #fffaffff;
     font-family: monospace;
-    height: 100vh;
-    width: 100vw;
+  
 }
 #logo{
     margin: 5px;

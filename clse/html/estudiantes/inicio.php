@@ -15,7 +15,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
     <title>inicio</title>
     <link rel="stylesheet" href="../../css/navegacion.css">
     <link rel="stylesheet" href="../../css/contenido.css">
-    <link rel="shortcut icon" href="../../img/image.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
 </head>
 <body>
 <header id="cabeza">

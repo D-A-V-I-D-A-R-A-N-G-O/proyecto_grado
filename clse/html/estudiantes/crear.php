@@ -14,7 +14,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
     <link rel="stylesheet" href="../../css/navegacion.css">
-    <link rel="shortcut icon" href="../../img/image.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
 </head>
 <body>
         <header id="cabeza">
@@ -28,6 +28,6 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
         <a id="out" href="../../index.php"><img id="salir" src="../../img/logout.jpg" alt=""></a>
         </div>
 </header>
-   
+   <section class="contenido"></section>
 </body>
 </html>

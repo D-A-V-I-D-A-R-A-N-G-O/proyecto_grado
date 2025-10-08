@@ -8,16 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./img/F. C (1).png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a mi sitio web</h1>
+        <h1>Bienvenidos a FlashCards</h1>
     </header>
 
    
         <form action="./funciones/check.php" method="POST">
             <p>Ingresa el usuario</p>
-            <input id="user" type="number" maxlength="10" placeholder="usuario" name="name" required>
+            <input id="user" type="text" maxlength="10" placeholder="usuario" name="name" required>
             <p>Ingresa la contraseña</p>
             <input id="password" type="password" maxlength="10" placeholder="contraseña" name="password" required>
             <input type="submit" id="check"  name="entrar">

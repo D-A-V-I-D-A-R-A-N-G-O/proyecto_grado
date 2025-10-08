@@ -1,14 +1,35 @@
 .contenido {
     margin-top: 15vh; /* Ajusta según la altura real del header */
-    position: relative; /* Cambia a relative para que fluya debajo del header */
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 100%; /* Cambia a auto para que tome el contenido */
+    min-height: 85vh; /* asegura que cubra la pantalla sin forzar el estiramiento */
     color: whitesmoke;
-    font-size: 200%;
     text-shadow: #124948 1px 1px 2px;
-        z-index: -1;
-
+    z-index: -1;
+    padding: 10px;
+    box-sizing: border-box; /* asegura que el padding no sobrescriba el ancho */
+}
+.contenido h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+#imagen{
+    width: 100px;
+    height: 100px;
+}
+.tarjeta{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+    height: auto;
 }
