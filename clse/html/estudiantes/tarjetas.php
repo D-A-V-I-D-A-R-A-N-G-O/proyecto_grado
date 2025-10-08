@@ -5,7 +5,9 @@
     header("Location: ../../index.php");
     exit();
 }
-    $sql = "SELECT * FROM flashcards WHERE id = 4" ;
+
+
+    $sql = "SELECT * FROM flashcards" ;
     $resultado = mysqli_query($conexion, $sql);
     $fila = mysqli_fetch_assoc($resultado);
 ?>
@@ -37,13 +39,21 @@
           <div>
             <h1>Bienvenido a la sección de Tarjetas</h1>
             <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
-            <div class="tarjeta">
-              <h2> <?php echo htmlspecialchars($fila['titulo']) ?></h2>
-              <p> <?php echo htmlspecialchars($fila['contenido']) ?></p>
-             <img id="imagen" src="<?php echo htmlspecialchars($fila['imgURL']) ?>" alt="">
-            </div>
+              <?php 
+          while ($fila = mysqli_fetch_assoc($resultado)) {
+            echo '
+            <button id="boton" onclick="mostrar()">'.$fila['titulo'].'</button>
+            <div class="tarjeta" style="display=none ;"> 
+            <h2>'.$fila['titulo'].'</h2>
+            <p>'.$fila['contenido'].'</p>
+            <img id="imagen" src="'.$fila['imgURL'].'" alt="">
+            </div>';
+          };
+         
+          ?>
             
           </div>
+        
         
         </section>
 </body>
