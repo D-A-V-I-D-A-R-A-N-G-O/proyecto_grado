@@ -5,10 +5,9 @@
     header("Location: ../../index.php");
     exit();
 }
-    $sql = "SELECT * FROM flashcards WHERE id = 4";
+    $sql = "SELECT * FROM flashcards";
     $resultado = mysqli_query($conexion, $sql);
     $fila = mysqli_fetch_assoc($resultado);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,11 +31,11 @@
         <a id="boton" href="./crear.php">Crear</a>
         <a id="out" href="../../index.php"><img id="salir" src="../../img/logout.jpg" alt=""></a>
 </header>
-        <section id="contenido">
+        <section class="contenido">
             <h1>Bienvenido a la sección de Tarjetas</h1>
             <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
-            <h1></h1>
-            <p></p>
+            <h1><?php echo htmlspecialchars($fila['titulo']) ?></h1>
+            <p><?php echo htmlspecialchars($fila['contenido']) ?></p>
             <img src="<?php echo htmlspecialchars($fila['imgURL']) ?>" alt="">
         </section>
 </body>

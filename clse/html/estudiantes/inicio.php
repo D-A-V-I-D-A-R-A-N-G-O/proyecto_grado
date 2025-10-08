@@ -28,7 +28,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
         <a id="boton" href="./crear.php">Crear</a>
         <a id="out" href="../../index.php"><img id="salir" src="../../img/logout.jpg" alt=""></a>
 </header>
-<section id="contenido">   
+<section class="contenido">   
      <h2>Bienvenido, <?php echo htmlspecialchars($_SESSION['name']); ?>, y soy <?php echo htmlspecialchars($_SESSION['rol']); ?></h2>
 </section>
    

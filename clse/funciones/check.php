@@ -13,14 +13,11 @@ include("connect.php");
             $fila = mysqli_fetch_assoc($resultado);
             session_start();
             if ($fila['rol'] == 'DOCENTE') {
-                $_SESSION['rol'] = $fila['rol'];
-                $_SESSION['name'] = $fila['name'];
-                $_SESSION['ti'] = $fila['ti'];
+        
+                $_SESSION = $fila;
             header("Location: ../html/profesores/inicio.php");
             } elseif ($fila['rol'] == 'ALUMNO') {
-                $_SESSION['rol'] = $fila['rol'];
-                $_SESSION['name'] = $fila['name'];
-                $_SESSION['ti'] = $fila['ti'];
+                $_SESSION = $fila;
                 header("Location: ../html/estudiantes/inicio.php");
             }
             
