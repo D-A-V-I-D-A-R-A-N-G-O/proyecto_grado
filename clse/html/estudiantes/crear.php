@@ -15,6 +15,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
     <title>inicio</title>
     <link rel="stylesheet" href="../../css/navegacion.css">
     <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/contenido.css">
 </head>
 <body>
         <header id="cabeza">
@@ -28,6 +29,21 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
         <a id="out" href="../../index.php"><img id="salir" src="../../img/logout.jpg" alt=""></a>
         </div>
 </header>
-   <section class="contenido"></section>
+   <section class="contenido">
+    <div>
+        <form action="../../funciones/make.php" method="POST" name="crear">
+            <p>Titulo</p>
+            <input type="text" maxlength="40" name="titulo" required>
+            <p>Contenido</p>
+            <input type="text" name="contenido" required>
+            <p>Notas</p>
+            <input type="text" name="notas" required>
+            <p>imgURL</p>
+            <input type="url" name="imgURL" required>
+            <input value="<?php echo $_SESSION['name'] ?>" name="creador" style="display: none;">
+            <input type="submit" name="crear">
+        </form>
+    </div>
+   </section>
 </body>
 </html>
