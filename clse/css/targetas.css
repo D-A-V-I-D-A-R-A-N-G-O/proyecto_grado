@@ -1,5 +1,40 @@
-#tarjetas {
-    flex-wrap: wrap;
+
+
+#navegaciones{
+    padding: 0%;
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;       
+    height: 100%;             
+}
+#button{
+     display: flex;
+    align-content: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    width: 30vw;
+    height: 10vh;
+    background-color: transparent;
+    text-align: center;
+    border: 3px solid  #fffaffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 110%;
+    color: #FFFAFF;
+}
+.tarjeta{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    justify-self: center;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+   
+}
+#botones{
     justify-content: space-around;
 }

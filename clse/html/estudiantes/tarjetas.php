@@ -6,10 +6,6 @@
     exit();
 }
 
-
-    $sql = "SELECT * FROM flashcards" ;
-    $resultado = mysqli_query($conexion, $sql);
-    $fila = mysqli_fetch_assoc($resultado);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,16 +36,28 @@
           <div>
             <h1>Bienvenido a la sección de Tarjetas</h1>
             <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
-              <div id="tarjetas">
+            <div id="botones" style="display: flex;">
                 <?php 
-          while ($fila = mysqli_fetch_assoc($resultado)) {
-            echo '
-            <div>
-            <button id="button" onclick="mostrar('.$fila['id'].')">'.$fila['titulo'].'</button>
-            <div id="'.$fila['id'].'" class="tarjeta" style="display:none ;"> 
+                 $sql = "SELECT * FROM flashcards" ;
+                $resultado = mysqli_query($conexion, $sql);
+                while ($fila = mysqli_fetch_assoc($resultado)) {
+                echo '<button id="button" onclick="mostrar('.$fila['id'].')">'.$fila['titulo'].'</button>';
+                };
+                ?>
+            </div>
+
+            <div id="tarjetas">
+            <?php
+             $sql = "SELECT * FROM flashcards" ;
+    $resultado = mysqli_query($conexion, $sql);
+            while ($fila = mysqli_fetch_assoc($resultado)) {
+            echo '<div id="contenedor">
+
+            <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
             <h2>'.$fila['titulo'].'</h2>
             <p>'.$fila['contenido'].'</p>
             <img id="imagen" src="'.$fila['imgURL'].'" alt="">
+            <button id="cerrar" onclick="cerrar('.$fila['id'].')">Cerrar</button>
             </div>
             </div>';
           };
