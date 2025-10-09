@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../../css/navegacion.css">
     <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
     <link rel="stylesheet" href="../../css/contenido.css">
+    <link rel="stylesheet" href="../../css/targetas.css">
 
 </head>
 <body>
@@ -39,22 +40,23 @@
           <div>
             <h1>Bienvenido a la sección de Tarjetas</h1>
             <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
-              <?php 
+              <div id="tarjetas">
+                <?php 
           while ($fila = mysqli_fetch_assoc($resultado)) {
             echo '
-            <button id="boton" onclick="mostrar()">'.$fila['titulo'].'</button>
-            <div class="tarjeta" style="display=none ;"> 
+            <div>
+            <button id="button" onclick="mostrar('.$fila['id'].')">'.$fila['titulo'].'</button>
+            <div id="'.$fila['id'].'" class="tarjeta" style="display:none ;"> 
             <h2>'.$fila['titulo'].'</h2>
             <p>'.$fila['contenido'].'</p>
             <img id="imagen" src="'.$fila['imgURL'].'" alt="">
+            </div>
             </div>';
           };
-         
           ?>
-            
           </div>
-        
-        
+          </div>
         </section>
 </body>
+<script src="../../funciones/mostrar.js"></script>
 </html>
