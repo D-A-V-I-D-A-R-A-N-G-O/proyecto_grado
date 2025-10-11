@@ -1,40 +1,32 @@
 
-
-#navegaciones{
-    padding: 0%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;       
-    height: 100%;             
+.botonn{
+    background-color: #1249489c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+     
 }
-#button{
-     display: flex;
-    align-content: center;
-    flex-direction: column-reverse;
-    justify-content: center;
-    width: 30vw;
-    height: 10vh;
-    background-color: transparent;
-    text-align: center;
-    border: 3px solid  #fffaffff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 110%;
-    color: #FFFAFF;
+
+#botones{
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .tarjeta{
-    color: black;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    justify-items: center;
-    justify-self: center;
-    align-content: center;
-    align-self: center;
-    align-items: center;
-   
-}
-#botones{
-    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    /* padding: 20px;
+    margin: 20px ; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }

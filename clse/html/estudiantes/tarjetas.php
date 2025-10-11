@@ -7,17 +7,16 @@
 }
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
     <link rel="stylesheet" href="../../css/navegacion.css">
-    <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
     <link rel="stylesheet" href="../../css/contenido.css">
     <link rel="stylesheet" href="../../css/targetas.css">
-
+    <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
 </head>
 <body>
         <header id="cabeza">
@@ -41,7 +40,7 @@
                  $sql = "SELECT * FROM flashcards" ;
                 $resultado = mysqli_query($conexion, $sql);
                 while ($fila = mysqli_fetch_assoc($resultado)) {
-                echo '<button id="button" onclick="mostrar('.$fila['id'].')">'.$fila['titulo'].'</button>';
+                echo '<button class="botonn" onclick="mostrar('.$fila['id'].')">'.$fila['titulo'].'</button>';
                 };
                 ?>
             </div>
@@ -51,7 +50,7 @@
              $sql = "SELECT * FROM flashcards" ;
     $resultado = mysqli_query($conexion, $sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
-            echo '<div id="contenedor">
+            echo '
 
             <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
             <h2>'.$fila['titulo'].'</h2>
@@ -59,7 +58,7 @@
             <img id="imagen" src="'.$fila['imgURL'].'" alt="">
             <button id="cerrar" onclick="cerrar('.$fila['id'].')">Cerrar</button>
             </div>
-            </div>';
+           ';
           };
           ?>
           </div>
