@@ -32,7 +32,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
    <section class="contenido">
     <div>
         <form action="../../funciones/make.php" method="POST" name="crear">
-            <p>Titulo</p>
+            <p>Título</p>
             <input type="text" maxlength="40" name="titulo" required>
             <p>Contenido</p>
             <input type="text" name="contenido" required>
@@ -40,8 +40,18 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
             <input type="text" name="notas" required>
             <p>imgURL</p>
             <input type="url" name="imgURL" required>
-            <input value="<?php echo $_SESSION['name'] ?>" name="creador" style="display: none;">
-            <input type="submit" name="crear">
+            <input type="hidden" value="<?php echo $_SESSION['name'] ?>" name="creador">
+            <label>
+                Seleccione la materia
+                <select name="materia" required>
+                    <option value="">Seleccione la materia</option>
+                    <option value="M">Matemáticas</option>
+                    <option value="CN">Ciencias Naturales</option>
+                    <option value="CS">Ciencias Sociales</option>
+                    <option value="LL">Lenguaje y Literatura</option>
+                </select>
+            </label>
+            <input type="submit" name="crear" value="Crear">
         </form>
     </div>
    </section>

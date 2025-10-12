@@ -8,9 +8,10 @@ if (isset($_POST['crear'])) {
     $contenido = mysqli_real_escape_string($conexion, $_POST["contenido"]);
     $imgURL = mysqli_real_escape_string($conexion, $_POST["imgURL"]);
     $notas = mysqli_real_escape_string($conexion, $_POST["notas"]);
+    $tipo = mysqli_real_escape_string($conexion, $_POST["materia"]);
 
 
-    $_sql = "INSERT INTO `flashcards` (`id`, `titulo`, `contenido`, `imgURL`, `notas`, `autor`) VALUES (NULL, '$titulo', '$contenido', '$imgURL', '$notas', '$autor')";
+    $_sql = "INSERT INTO `flashcards` (`id`, `titulo`, `contenido`, `imgURL`, `notas`, `autor`, `tipo`) VALUES (NULL, '$titulo', '$contenido', '$imgURL', '$notas', '$autor', '$tipo');";
     $resultado = mysqli_query($conexion, $_sql); 
     if ($resultado) {
         echo "<script>
@@ -23,7 +24,7 @@ if (isset($_POST['crear'])) {
         alert('No se pudo crear la tarjeta');
         window.location = '../html/estudiantes/inicio.php';
         </script>";
-        exit();
+        exit();  
     }
 }
 ?>

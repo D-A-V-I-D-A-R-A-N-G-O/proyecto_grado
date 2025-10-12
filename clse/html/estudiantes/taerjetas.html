@@ -1,0 +1,98 @@
+<!DOCTYPE php>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio</title>
+    <link rel="stylesheet" href="../../css/navegacion.css">
+    <link rel="stylesheet" href="../../css/contenido.css">
+    <link rel="stylesheet" href="../../css/targetas.css">
+    <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
+</head>
+<body>
+        <header id="cabeza">
+          <div id="menu">
+            <div id="logos">
+            <img id="logo" src="../../img/image.png" alt="">
+            </div>
+        <a id="boton" href="./inicio.php">Inicio</a>
+        <a id="boton" href="./tarjetas.php">Tarjetas</a>
+        <a id="boton" href="./crear.php">Crear</a>
+        <a id="out" href="../../index.php"><img id="salir" src="../../img/logout.jpg" alt=""></a>
+</header>
+
+
+        <section class="contenido">
+          <div>
+            <h1>Bienvenido a la sección de Tarjetas</h1>
+            <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
+            <div id="botones" style="display: flex;">
+                <button class="botonn" onclick="mostrar(2)">Teoría de la Relatividad</button><button class="botonn" onclick="mostrar(3)">Fotosíntesis</button><button class="botonn" onclick="mostrar(4)">Revolución Francesa</button><button class="botonn" onclick="mostrar(8)">yy6y</button><button class="botonn" onclick="mostrar(9)">4r4t4</button>            </div>
+
+            <div id="tarjetas">
+            
+
+            <div id="2" class="tarjeta" style="display:none;"> 
+            <h2>Teoría de la Relatividad</h2>
+            <p>La teoría de la relatividad general fue publicada por Einstein en 1915, y describe la gravedad como curvatura del espacio-tiempo.</p>
+            <div class="info">
+            <img id="imagen" src="https://picsum.photos/seed/relativity/600/400" alt="">
+            <p>Notas: Importante para física moderna, revisar ecuaciones de campo</p>            
+            </div>
+
+            <button id="cerrar" onclick="cerrar(2)">Cerrar</button>
+            </div>
+           
+
+            <div id="3" class="tarjeta" style="display:none;"> 
+            <h2>Fotosíntesis</h2>
+            <p>Proceso mediante el cual las plantas convierten CO₂ y agua en glucosa y oxígeno usando luz solar.</p>
+            <div class="info">
+            <img id="imagen" src="https://placehold.co/600x400.png?text=Fotosintesis" alt="">
+            <p>Notas: Ver también fases claras y oscuras</p>            
+            </div>
+
+            <button id="cerrar" onclick="cerrar(3)">Cerrar</button>
+            </div>
+           
+
+            <div id="4" class="tarjeta" style="display:none;"> 
+            <h2>Revolución Francesa</h2>
+            <p>Movimiento social y político que comenzó en 1789 en Francia y alteró profundamente la estructura de poder europea.</p>
+            <div class="info">
+            <img id="imagen" src="https://yavuzceliker.github.io/sample-images/image-1021.jpg" alt="">
+            <p>Notas: Relacionar con causas: desigualdad, crisis económica, ideas ilustradas</p>            
+            </div>
+
+            <button id="cerrar" onclick="cerrar(4)">Cerrar</button>
+            </div>
+           
+
+            <div id="8" class="tarjeta" style="display:none;"> 
+            <h2>yy6y</h2>
+            <p>y6y65</p>
+            <div class="info">
+            <img id="imagen" src="http://t4t4t4.com" alt="">
+            <p>Notas: y6y6y</p>            
+            </div>
+
+            <button id="cerrar" onclick="cerrar(8)">Cerrar</button>
+            </div>
+           
+
+            <div id="9" class="tarjeta" style="display:none;"> 
+            <h2>4r4t4</h2>
+            <p>UNA CHINA QUE LE GUSTA EL TINTO</p>
+            <div class="info">
+            <img id="imagen" src="http://t4t4t4.com" alt="">
+            <p>Notas: t4t4t4</p>            
+            </div>
+
+            <button id="cerrar" onclick="cerrar(9)">Cerrar</button>
+            </div>
+                     </div>
+          </div>
+        </section>
+</body>
+<script src="../../funciones/mostrar.js"></script>
+</html>

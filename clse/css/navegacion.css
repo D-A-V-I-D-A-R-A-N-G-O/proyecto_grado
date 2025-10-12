@@ -5,15 +5,12 @@
 --black: #050401ff; */
 
 body{
-    font-family: Arial, sans-serif;
     padding-top: 0%;
     margin: 0%;
-    /* background-image: url("https://cdn.pixabay.com/photo/2018/01/29/13/03/internet-3116062_1280.jpg"); */
     background-image: url("../img/fonfo-estudiantes.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color:  #fffaffff;
     font-family: monospace;
   
 }
@@ -38,6 +35,7 @@ body{
     filter: invert(1);
     width: 10vh;
    border-radius: 600px;
+       transition: background-color 0.3s ease;
 }
 #salir:hover{
     background-color: rgb(0, 204, 255);
@@ -84,14 +82,17 @@ body{
     text-decoration: none;
     font-size: 200%;
     color: #FFFAFF;
+        transition: background-color 0.3s ease;
+
 }
 #menu{
     width: 100%;
     display: flex;
     justify-content: space-around;
     font-size: 10px;
+    
 }
-#menu a:hover{
+#boton:hover{
     background-color: #258b8a;
 }
 

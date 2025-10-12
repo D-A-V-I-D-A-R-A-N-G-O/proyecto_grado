@@ -1,3 +1,4 @@
+
 <?php 
     include("../../funciones/connect.php");
     session_start();
@@ -53,10 +54,12 @@
             echo '
 
             <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
             <h2>'.$fila['titulo'].'</h2>
+            <img id="imagen" src="'.$fila['imgURL'].'" alt="">          
+            </div>
+            <div id="parte2" >
             <p>'.$fila['contenido'].'</p>
-            <div class="info">
-            <img id="imagen" src="'.$fila['imgURL'].'" alt="">
             <p>Notas: '.$fila['notas'].'</p>            
             </div>
 
@@ -70,4 +73,5 @@
         </section>
 </body>
 <script src="../../funciones/mostrar.js"></script>
+
 </html>
