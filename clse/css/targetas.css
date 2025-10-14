@@ -10,36 +10,27 @@
     font-size: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-        border: 3px solid  #fffaffff;
-
-     
+    border: 3px solid  #fffaffff;     
 }
 .botonn:hover{
     background-color: #0e3635;
 }
-
 #botones{
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 .tarjeta{
     font-size: 120%;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px ;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1vw2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: auto;
-    height: 60vh;
+   
 }
 .tarjeta button{
+    width: 100vw;
     background-color: #1249489c;
     color: white;
     border: none;
@@ -52,32 +43,45 @@
     transition: background-color 0.3s ease;
         border: 3px solid  #fffaffff;
 }
+#parte1, #parte2{
+    background-color: #1249489c;
+    width: 44%;
+    color: whitesmoke;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1%;
+    border: 3px solid whitesmoke;
+    margin: 1%;
+    border-radius: 5px;
+}
+
 .tarjeta button:hover{
     background-color: #0e3635;
 }
-.info{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
-}
-.info p{
-    width: 35vw;
-    margin-left: 10vw ;
-}
 #imagen{
     max-width:  25vw;
-    height: fit-content;
     border-radius: 5px;
 }
-@media (max-width: 600px) {
-    .info{
+@media (max-width: 800px) {
+    #tarjeta{
         flex-direction: column;
+        align-self: center;
+        
     }
-    #imagen{
-        width: 50vw;
-        height: auto;
+    #imagen, #parte1 h2{
+        width: 40vw;
+        height: fit-content;
     }
+    
+    #parte1, #parte2{
+        width: 80vw;
+    }
+    #parte1{
+        flex-wrap: wrap;
+    }
+
 }
 

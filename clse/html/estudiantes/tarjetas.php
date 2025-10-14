@@ -1,3 +1,4 @@
+
 <?php 
     include("../../funciones/connect.php");
     session_start();
@@ -51,16 +52,18 @@
     $resultado = mysqli_query($conexion, $sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
             echo '
-
+            <div id="tarjetas">
             <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
             <h2>'.$fila['titulo'].'</h2>
+            <img id="imagen" src="'.$fila['imgURL'].'" alt="">          
+            </div>
+            <div id="parte2" >
             <p>'.$fila['contenido'].'</p>
-            <div class="info">
-            <img id="imagen" src="'.$fila['imgURL'].'" alt="">
             <p>Notas: '.$fila['notas'].'</p>            
             </div>
-
             <button id="cerrar" onclick="cerrar('.$fila['id'].')">Cerrar</button>
+            </div>
             </div>
            ';
           };
@@ -70,4 +73,5 @@
         </section>
 </body>
 <script src="../../funciones/mostrar.js"></script>
+
 </html>

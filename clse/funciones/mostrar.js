@@ -20,3 +20,4 @@ function cerrar(id) {
     }
     
 }
+

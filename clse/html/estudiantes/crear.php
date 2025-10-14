@@ -39,7 +39,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
             <p>Notas</p>
             <input type="text" name="notas" required>
             <p>imgURL</p>
-            <input type="url" name="imgURL" required>
+            <input type="url" name="imgURL" id="imgUrl" required>
             <input type="hidden" value="<?php echo $_SESSION['name'] ?>" name="creador">
             <label>
                 Seleccione la materia
@@ -53,7 +53,14 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
             </label>
             <input type="submit" name="crear" value="Crear">
         </form>
+        <div id="imagen">
+        <h3>Pre Ver Imagen</h3>
+        <div id="contenedor-imagen"></div>
+    </div>
     </div>
    </section>
 </body>
+<script src="../../funciones/mostrar.js"></script>
+<script src="../../funciones/img.js">
+</script>
 </html>
