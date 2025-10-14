@@ -14,6 +14,6 @@ function img() {
 
 function imagen() {
   const imgUrl = document.getElementById("imgUrl")
-  imgUrl.addEventListener('input', img())
+  imgUrl.addEventListener('input', img)
 }
 window.onload = imagen
