@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
-    <link rel="stylesheet" href="../../css/navegacion.css">
+    <link rel="stylesheet" href="../../css1/navegacion.css">
     <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
-    <link rel="stylesheet" href="../../css/contenido.css">
-    <link rel="stylesheet" href="../../css/crear.css">
+    <link rel="stylesheet" href="../../css1/contenido.css">
+    <link rel="stylesheet" href="../../css1/crear.css">
 
 </head>
 <body>

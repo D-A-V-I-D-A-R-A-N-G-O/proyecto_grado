@@ -16,6 +16,7 @@ include("connect.php");
         
                 $_SESSION = $fila;
             header("Location: ../html/profesores/inicio.php");
+            
             } elseif ($fila['rol'] == 'ALUMNO') {
                 $_SESSION = $fila;
                 header("Location: ../html/estudiantes/inicio.php");

@@ -1,0 +1,90 @@
+
+.botonn{
+    background-color: #4912129c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    border: 3px solid  #fffaffff; 
+     
+    
+}
+.botonn:hover{
+    background-color: #36100e;
+}
+#botones{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.tarjeta{
+    font-size: 120%;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(78, 78, 78);
+    padding: 1vw;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+.tarjeta button{
+
+    background-color: #4b00009c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    border: 3px solid  #fffaffff;
+}
+#parte1, #parte2{
+    background-color:#4b00009c;
+    width: 43vw;
+    color: whitesmoke;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 3px solid whitesmoke;
+    border-radius: 5px;
+    padding: 2%;
+    margin: 0.2%;
+}
+
+.tarjeta button:hover{
+    background-color: #4a0909;
+}
+#imagen{
+    max-width:  25vw;
+    border-radius: 5px;
+}
+@media (max-width: 800px) {
+    #tarjeta{
+        flex-direction: column;
+        align-self: center;
+        
+    }
+    #imagen, #parte1 h2{
+        width: 46vw;
+        height: fit-content;
+    }
+    
+    #parte1, #parte2{
+        width: 80vw;
+    }
+    #parte1{
+        flex-wrap: wrap;
+    }
+
+}
+
