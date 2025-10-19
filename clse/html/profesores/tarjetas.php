@@ -60,7 +60,9 @@
             </div>
             <div id="parte2" >
             <p>'.$fila['contenido'].'</p>
-            <p>Notas: '.$fila['notas'].'</p>            
+            <p>Notas: '.$fila['notas'].'</p>
+           <p>Autor: '.$fila['autor'].'</p>            
+           
             </div>
             <button id="cerrar" onclick="cerrar('.$fila['id'].')">Cerrar</button>
             </div>
