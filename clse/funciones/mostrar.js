@@ -18,6 +18,45 @@ function cerrar(id) {
     } else {
         targeta.style.display = "flex";
     }
-    
 }
-
+function filtrar(tipo) {
+    let sociales = document.getElementById("botones_sociales");
+    let lenguaje = document.getElementById("botones_literatura");
+    let matematicas = document.getElementById("botones_matematicas");
+    let ciencias = document.getElementById("botones_ciencias");
+    switch (tipo) {
+        case "M":
+             matematicas.style.display = "flex";
+             sociales.style.display = "none";
+             lenguaje.style.display = "none";
+             ciencias.style.display = "none";
+            break;
+    
+        case "CN":
+             matematicas.style.display = "none";
+             sociales.style.display = "none";
+             lenguaje.style.display = "none";
+             ciencias.style.display = "flex";
+                        
+            break;
+    
+        case "CS":
+             matematicas.style.display = "none";
+             sociales.style.display = "flex";
+             lenguaje.style.display = "none";
+             ciencias.style.display = "none";
+            
+            break;
+    
+        case "LL":
+             matematicas.style.display = "none";
+             sociales.style.display = "none";
+             lenguaje.style.display = "flex";
+             ciencias.style.display = "none";
+            
+            break;
+    
+        default:
+            break;
+    }
+}

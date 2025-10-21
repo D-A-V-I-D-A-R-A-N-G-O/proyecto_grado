@@ -1,5 +1,5 @@
 
-.botonn{
+.CN, .M, .CS, .LL {
     background-color: #4912129c;
     color: white;
     border: none;
@@ -14,7 +14,7 @@
      
     
 }
-.botonn:hover{
+.CN:hover, .M:hover, .CS:hover, .LL:hover {
     background-color: #36100e;
 }
 #botones{

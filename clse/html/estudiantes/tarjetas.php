@@ -36,12 +36,45 @@
           <div>
             <h1>Bienvenido a la sección de Tarjetas</h1>
             <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
-            <div id="botones" style="display: flex;">
+            <div class="materias" id="materias">
+              <button onclick="filtrar('CN')">Ciencias Naturales</button>
+              <button onclick="filtrar('M')">Matematicas</button>
+              <button onclick="filtrar('CS')">Ciencias Sociales</button>
+              <button onclick="filtrar('LL')">Literatura y Lenguaje</button>
+            </div>
+            <div id="botones_ciencias" style="display: none;">
                 <?php 
-                 $sql = "SELECT * FROM flashcards"  ;
+                 $sql = "SELECT * FROM flashcards WHERE tipo='CN'"  ;
                 $resultado = mysqli_query($conexion, $sql);
                 while ($fila = mysqli_fetch_assoc($resultado)) {
-                echo '<button class="botonn" onclick="mostrar('.$fila['id'].')">'.$fila['titulo'].'</button>';
+                echo '<button class="'.$fila['tipo'].'" onclick="mostrar('.$fila['id'].')">'.$fila['titulo'].'</button>';
+                };
+                ?>
+            </div>
+            <div id="botones_sociales" style="display: none;">
+                <?php 
+                 $sql = "SELECT * FROM flashcards WHERE tipo='CS'"  ;
+                $resultado = mysqli_query($conexion, $sql);
+                while ($fila = mysqli_fetch_assoc($resultado)) {
+                echo '<button class="'.$fila['tipo'].'" onclick="mostrar('.$fila['id'].')">'.$fila['titulo'].'</button>';
+                };
+                ?>
+            </div>
+            <div id="botones_literatura" style="display: none;">
+                <?php 
+                 $sql = "SELECT * FROM flashcards WHERE tipo='LL'"  ;
+                $resultado = mysqli_query($conexion, $sql);
+                while ($fila = mysqli_fetch_assoc($resultado)) {
+                echo '<button class="'.$fila['tipo'].'" onclick="mostrar('.$fila['id'].')">'.$fila['titulo'].'</button>';
+                };
+                ?>
+            </div>
+            <div id="botones_matematicas" style="display: none;">
+                <?php 
+                 $sql = "SELECT * FROM flashcards WHERE tipo='M'"  ;
+                $resultado = mysqli_query($conexion, $sql);
+                while ($fila = mysqli_fetch_assoc($resultado)) {
+                echo '<button class="'.$fila['tipo'].'" onclick="mostrar('.$fila['id'].')">'.$fila['titulo'].'</button>';
                 };
                 ?>
             </div>
@@ -52,7 +85,7 @@
     $resultado = mysqli_query($conexion, $sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
             echo '
-            <div id="tarjetas">
+            <div  id="tarjetas">
             <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>'.$fila['titulo'].'</h2>
