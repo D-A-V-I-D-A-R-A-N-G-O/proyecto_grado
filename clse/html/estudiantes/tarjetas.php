@@ -85,7 +85,7 @@
     $resultado = mysqli_query($conexion, $sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
             echo '
-            <div  id="tarjetas">
+            <div class="'.$fila['tipo'].'" id="tarjetas">
             <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>'.$fila['titulo'].'</h2>

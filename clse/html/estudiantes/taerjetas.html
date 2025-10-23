@@ -1,5 +1,4 @@
-
-<!DOCTYPE php>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,15 +27,23 @@
             <h1>Bienvenido a la sección de Tarjetas</h1>
             <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
             <div class="materias" id="materias">
-              <button onclick="filtrar(CN)">Ciencias Naturales</button>
-              <button onclick="filtrar(M)">Matematicas</button>
-              <button onclick="filtrar(CS)">Ciencias Sociales</button>
-              <button onclick="filtrar(LL)">Literatura y Lenguaje</button>
+              <button onclick="filtrar('CN')">Ciencias Naturales</button>
+              <button onclick="filtrar('M')">Matematicas</button>
+              <button onclick="filtrar('CS')">Ciencias Sociales</button>
+              <button onclick="filtrar('LL')">Literatura y Lenguaje</button>
             </div>
+            <div id="botones_ciencias" style="display: none;">
+                <button class="CN" onclick="mostrar(16)">Fotosíntesis</button><button class="CN" onclick="mostrar(17)">Sistema Nervioso Humano</button><button class="CN" onclick="mostrar(18)">Ecosistemas</button>            </div>
+            <div id="botones_sociales" style="display: none;">
+                <button class="CS" onclick="mostrar(19)">La Revolución Industrial</button><button class="CS" onclick="mostrar(20)">La Independencia de América Latina</button><button class="CS" onclick="mostrar(21)">Globalización</button>            </div>
+            <div id="botones_literatura" style="display: none;">
+                <button class="LL" onclick="mostrar(25)">Figuras Literarias</button><button class="LL" onclick="mostrar(26)">Tipos de Narrador</button><button class="LL" onclick="mostrar(27)">El Realismo Literario</button>            </div>
+            <div id="botones_matematicas" style="display: none;">
+                <button class="M" onclick="mostrar(22)">Teorema de Pitágoras</button><button class="M" onclick="mostrar(23)">Funciones Matemáticas</button><button class="M" onclick="mostrar(24)">Probabilidad</button>            </div>
+
             <div id="tarjetas">
             
-            <div  id="tarjeta">
-            <button class="CN" onclick="mostrar(16)">Fotosíntesis</button>
+            <div  id="tarjetas">
             <div id="16" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>Fotosíntesis</h2>
@@ -50,8 +57,7 @@
             </div>
             </div>
            
-            <div  id="tarjeta">
-            <button class="CN" onclick="mostrar(17)">Sistema Nervioso Humano</button>
+            <div  id="tarjetas">
             <div id="17" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>Sistema Nervioso Humano</h2>
@@ -65,8 +71,7 @@
             </div>
             </div>
            
-            <div  id="tarjeta">
-            <button class="CN" onclick="mostrar(18)">Ecosistemas</button>
+            <div  id="tarjetas">
             <div id="18" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>Ecosistemas</h2>
@@ -80,8 +85,7 @@
             </div>
             </div>
            
-            <div  id="tarjeta">
-            <button class="CS" onclick="mostrar(19)">La Revolución Industrial</button>
+            <div  id="tarjetas">
             <div id="19" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>La Revolución Industrial</h2>
@@ -95,8 +99,7 @@
             </div>
             </div>
            
-            <div  id="tarjeta">
-            <button class="CS" onclick="mostrar(20)">La Independencia de América Latina</button>
+            <div  id="tarjetas">
             <div id="20" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>La Independencia de América Latina</h2>
@@ -110,8 +113,7 @@
             </div>
             </div>
            
-            <div  id="tarjeta">
-            <button class="CS" onclick="mostrar(21)">Globalización</button>
+            <div  id="tarjetas">
             <div id="21" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>Globalización</h2>
@@ -125,8 +127,7 @@
             </div>
             </div>
            
-            <div  id="tarjeta">
-            <button class="M" onclick="mostrar(22)">Teorema de Pitágoras</button>
+            <div  id="tarjetas">
             <div id="22" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>Teorema de Pitágoras</h2>
@@ -140,8 +141,7 @@
             </div>
             </div>
            
-            <div  id="tarjeta">
-            <button class="M" onclick="mostrar(23)">Funciones Matemáticas</button>
+            <div  id="tarjetas">
             <div id="23" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>Funciones Matemáticas</h2>
@@ -155,8 +155,7 @@
             </div>
             </div>
            
-            <div  id="tarjeta">
-            <button class="M" onclick="mostrar(24)">Probabilidad</button>
+            <div  id="tarjetas">
             <div id="24" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>Probabilidad</h2>
@@ -170,8 +169,7 @@
             </div>
             </div>
            
-            <div  id="tarjeta">
-            <button class="LL" onclick="mostrar(25)">Figuras Literarias</button>
+            <div  id="tarjetas">
             <div id="25" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>Figuras Literarias</h2>
@@ -185,8 +183,7 @@
             </div>
             </div>
            
-            <div  id="tarjeta">
-            <button class="LL" onclick="mostrar(26)">Tipos de Narrador</button>
+            <div  id="tarjetas">
             <div id="26" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>Tipos de Narrador</h2>
@@ -200,8 +197,7 @@
             </div>
             </div>
            
-            <div  id="tarjeta">
-            <button class="LL" onclick="mostrar(27)">El Realismo Literario</button>
+            <div  id="tarjetas">
             <div id="27" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>El Realismo Literario</h2>

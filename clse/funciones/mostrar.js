@@ -1,23 +1,19 @@
 function mostrar(id) {
-    let targeta = document.getElementById(id);
-    let botones = document.getElementById("botones");
-    if (targeta.style.display === "none") {
-        targeta.style.display = "flex";
-        botones.style.display = "none";
-    } else {
-        targeta.style.display = "none";
-    }
-
+    let tarjeta = document.getElementById(id);
+    let botones = document.querySelectorAll(
+        "#botones_ciencias button, #botones_sociales button, #botones_literatura button, #botones_matematicas button"
+    );
+    tarjeta.style.display = "flex";
+    botones.forEach(boton => boton.style.display = "none");
 }
+
 function cerrar(id) {
     let targeta = document.getElementById(id);
-    let botones = document.getElementById("botones");
-    if (targeta.style.display === "flex") {
-        targeta.style.display = "none";
-        botones.style.display = "flex";
-    } else {
-        targeta.style.display = "flex";
-    }
+let botones = document.querySelectorAll(
+        "#botones_ciencias button, #botones_sociales button, #botones_literatura button, #botones_matematicas button"
+    );
+    targeta.style.display = "none";
+    botones.forEach(boton => boton.style.display = "flex");
 }
 function filtrar(tipo) {
     let sociales = document.getElementById("botones_sociales");

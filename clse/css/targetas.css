@@ -1,5 +1,5 @@
 
-.CN, .M, .CS, .LL {
+.CN, .M, .CS, .LL, .materias button{
     background-color: #1249489c;
     color: white;
     border: none;
@@ -12,7 +12,7 @@
     transition: background-color 0.3s ease;
     border: 3px solid  #fffaffff;     
 }
-.CN{
+.CN:hover, .M:hover, .CS:hover, .LL:hover {
     background-color: #0e3635;
 }
 #botones{
