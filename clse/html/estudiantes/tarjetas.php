@@ -42,7 +42,7 @@
               <button onclick="filtrar('CS')">Ciencias Sociales</button>
               <button onclick="filtrar('LL')">Literatura y Lenguaje</button>
             </div>
-            <div id="botones_ciencias" style="display: none;">
+            <div class="botones_materia" id="botones_ciencias" style="display: none;">
                 <?php 
                  $sql = "SELECT * FROM flashcards WHERE tipo='CN'"  ;
                 $resultado = mysqli_query($conexion, $sql);
@@ -51,7 +51,7 @@
                 };
                 ?>
             </div>
-            <div id="botones_sociales" style="display: none;">
+            <div class="botones_materia" id="botones_sociales" style="display: none;">
                 <?php 
                  $sql = "SELECT * FROM flashcards WHERE tipo='CS'"  ;
                 $resultado = mysqli_query($conexion, $sql);
@@ -60,7 +60,7 @@
                 };
                 ?>
             </div>
-            <div id="botones_literatura" style="display: none;">
+            <div class="botones_materia" id="botones_literatura" style="display: none;">
                 <?php 
                  $sql = "SELECT * FROM flashcards WHERE tipo='LL'"  ;
                 $resultado = mysqli_query($conexion, $sql);
@@ -69,7 +69,7 @@
                 };
                 ?>
             </div>
-            <div id="botones_matematicas" style="display: none;">
+            <div class="botones_materia" id="botones_matematicas" style="display: none;">
                 <?php 
                  $sql = "SELECT * FROM flashcards WHERE tipo='M'"  ;
                 $resultado = mysqli_query($conexion, $sql);

@@ -12,8 +12,18 @@
     transition: background-color 0.3s ease;
     border: 3px solid  #fffaffff;     
 }
+.botones_materia{
+    display: flex;
+    justify-content: space-around;
+
+}
 .CN:hover, .M:hover, .CS:hover, .LL:hover {
     background-color: #0e3635;
+}
+.materias{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 #botones{
     justify-content: space-between;
