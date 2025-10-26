@@ -22,15 +22,17 @@
 #tarjetas{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     
 }
 .tarjeta{
+    width: 90vw;
     font-size: 120%;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 1vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    
 }

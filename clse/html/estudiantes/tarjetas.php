@@ -85,7 +85,6 @@
     $resultado = mysqli_query($conexion, $sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
             echo '
-            <div class="'.$fila['tipo'].'" id="tarjetas">
             <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>'.$fila['titulo'].'</h2>
@@ -96,7 +95,6 @@
             <p>Notas: '.$fila['notas'].'</p>            
             </div>
             <button id="cerrar" onclick="cerrar('.$fila['id'].')">Cerrar</button>
-            </div>
             </div>
            ';
           };
