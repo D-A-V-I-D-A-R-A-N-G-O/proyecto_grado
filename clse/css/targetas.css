@@ -1,9 +1,21 @@
 
-.CN, .M, .CS, .LL, .materias button{
+.CN, .M, .CS, .LL, .materias button, .mostrar_materias {
     background-color: #1249489c;
     color: white;
     border: none;
     border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    border: 3px solid  #fffaffff;     
+}
+.mostrar_materias{
+    background-color: #1249489c;
+    color: white;
+    border: none;
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
@@ -18,7 +30,7 @@
     align-items: center;
     justify-content: space-around;
 }
-.CN:hover, .M:hover, .CS:hover, .LL:hover {
+.CN:hover, .M:hover, .CS:hover, .LL:hover, .materias button:hover, .mostrar_materias:hover {
     background-color: #0e3635;
 }
 .materias{

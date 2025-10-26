@@ -20,12 +20,16 @@ function mostrar_botones_tarjetas(tipo) {
     let lenguaje = document.getElementById("botones_literatura");
     let matematicas = document.getElementById("botones_matematicas");
     let ciencias = document.getElementById("botones_ciencias");
+    let materias = document.getElementById("materias");
+
+    
     switch (tipo) {
         case "M":
              matematicas.style.display = "flex";
              sociales.style.display = "none";
              lenguaje.style.display = "none";
              ciencias.style.display = "none";
+             materias.style.display = "none";
             break;
     
         case "CN":
@@ -33,7 +37,7 @@ function mostrar_botones_tarjetas(tipo) {
              sociales.style.display = "none";
              lenguaje.style.display = "none";
              ciencias.style.display = "flex";
-                        
+             materias.style.display = "none";
             break;
     
         case "CS":
@@ -41,6 +45,7 @@ function mostrar_botones_tarjetas(tipo) {
              sociales.style.display = "flex";
              lenguaje.style.display = "none";
              ciencias.style.display = "none";
+             materias.style.display = "none";
             
             break;
     
@@ -49,10 +54,19 @@ function mostrar_botones_tarjetas(tipo) {
              sociales.style.display = "none";
              lenguaje.style.display = "flex";
              ciencias.style.display = "none";
+             materias.style.display = "none";
             
             break;
     
         default:
             break;
     }
+}
+function mostrar_botones_materias() {
+    let materias = document.getElementById("materias");
+    materias.style.display = "flex";
+    let botones = document.querySelectorAll(
+        "#botones_ciencias, #botones_sociales, #botones_literatura, #botones_matematicas"
+    );
+    botones.forEach(boton => boton.style.display = "none");
 }

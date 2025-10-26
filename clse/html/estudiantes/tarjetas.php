@@ -43,7 +43,8 @@
               <button onclick="mostrar_botones_tarjetas('LL')">Literatura y Lenguaje</button>
             </div>
             <div class="botones_materia" id="botones_ciencias" style="display: none;">
-                <?php 
+                <?php
+                echo '<button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button>';
                  $sql = "SELECT * FROM flashcards WHERE tipo='CN'"  ;
                 $resultado = mysqli_query($conexion, $sql);
                 while ($fila = mysqli_fetch_assoc($resultado)) {
@@ -52,7 +53,8 @@
                 ?>
             </div>
             <div class="botones_materia" id="botones_sociales" style="display: none;">
-                <?php 
+                <?php
+                echo '<button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button>';
                  $sql = "SELECT * FROM flashcards WHERE tipo='CS'"  ;
                 $resultado = mysqli_query($conexion, $sql);
                 while ($fila = mysqli_fetch_assoc($resultado)) {
@@ -61,7 +63,8 @@
                 ?>
             </div>
             <div class="botones_materia" id="botones_literatura" style="display: none;">
-                <?php 
+                <?php
+                echo '<button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button>';
                  $sql = "SELECT * FROM flashcards WHERE tipo='LL'"  ;
                 $resultado = mysqli_query($conexion, $sql);
                 while ($fila = mysqli_fetch_assoc($resultado)) {
@@ -70,7 +73,8 @@
                 ?>
             </div>
             <div class="botones_materia" id="botones_matematicas" style="display: none;">
-                <?php 
+                <?php
+                echo '<button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button>';
                  $sql = "SELECT * FROM flashcards WHERE tipo='M'"  ;
                 $resultado = mysqli_query($conexion, $sql);
                 while ($fila = mysqli_fetch_assoc($resultado)) {
@@ -94,7 +98,7 @@
             <p>'.$fila['contenido'].'</p>
             <p>Notas: '.$fila['notas'].'</p>            
             </div>
-            <button id="cerrar" onclick="cerrar('.$fila['id'].')">Cerrar</button>
+            <button id="cerrar" onclick="cerrar_tarjetas('.$fila['id'].')">Cerrar</button>
             </div>
            ';
           };
