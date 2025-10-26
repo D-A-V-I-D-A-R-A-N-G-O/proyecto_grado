@@ -8,15 +8,15 @@
 }
 
 ?>
-<!DOCTYPE php>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
-    <link rel="stylesheet" href="../../css1/navegacion.css">
-    <link rel="stylesheet" href="../../css1/contenido.css">
-    <link rel="stylesheet" href="../../css1/targetas.css">
+    <link rel="stylesheet" href="../../css/navegacion.css">
+    <link rel="stylesheet" href="../../css/contenido.css">
+    <link rel="stylesheet" href="../../css/targetas.css">
     <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
 </head>
 <body>
@@ -36,12 +36,49 @@
           <div>
             <h1>Bienvenido a la sección de Tarjetas</h1>
             <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
-            <div id="botones" style="display: flex;">
-                <?php 
-                 $sql = "SELECT * FROM flashcards"  ;
+            <div class="materias" id="materias">
+              <button onclick="mostrar_botones_tarjetas('CN')">Ciencias Naturales</button>
+              <button onclick="mostrar_botones_tarjetas('M')">Matematicas</button>
+              <button onclick="mostrar_botones_tarjetas('CS')">Ciencias Sociales</button>
+              <button onclick="mostrar_botones_tarjetas('LL')">Literatura y Lenguaje</button>
+            </div>
+            <div class="botones_materia" id="botones_ciencias" style="display: none;">
+                <?php
+                echo '<button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button>';
+                 $sql = "SELECT * FROM flashcards WHERE tipo='CN'"  ;
                 $resultado = mysqli_query($conexion, $sql);
                 while ($fila = mysqli_fetch_assoc($resultado)) {
-                echo '<button class="botonn" onclick="mostrar('.$fila['id'].')">'.$fila['titulo'].'</button>';
+                echo '<button class="'.$fila['tipo'].'" onclick="mostrar_tarjetas('.$fila['id'].')">'.$fila['titulo'].'</button>';
+                };
+                ?>
+            </div>
+            <div class="botones_materia" id="botones_sociales" style="display: none;">
+                <?php
+                echo '<button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button>';
+                 $sql = "SELECT * FROM flashcards WHERE tipo='CS'"  ;
+                $resultado = mysqli_query($conexion, $sql);
+                while ($fila = mysqli_fetch_assoc($resultado)) {
+                echo '<button class="'.$fila['tipo'].'" onclick="mostrar_tarjetas('.$fila['id'].')">'.$fila['titulo'].'</button>';
+                };
+                ?>
+            </div>
+            <div class="botones_materia" id="botones_literatura" style="display: none;">
+                <?php
+                echo '<button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button>';
+                 $sql = "SELECT * FROM flashcards WHERE tipo='LL'"  ;
+                $resultado = mysqli_query($conexion, $sql);
+                while ($fila = mysqli_fetch_assoc($resultado)) {
+                echo '<button class="'.$fila['tipo'].'" onclick="mostrar_tarjetas('.$fila['id'].')">'.$fila['titulo'].'</button>';
+                };
+                ?>
+            </div>
+            <div class="botones_materia" id="botones_matematicas" style="display: none;">
+                <?php
+                echo '<button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button>';
+                 $sql = "SELECT * FROM flashcards WHERE tipo='M'"  ;
+                $resultado = mysqli_query($conexion, $sql);
+                while ($fila = mysqli_fetch_assoc($resultado)) {
+                echo '<button class="'.$fila['tipo'].'" onclick="mostrar_tarjetas('.$fila['id'].')">'.$fila['titulo'].'</button>';
                 };
                 ?>
             </div>
@@ -52,7 +89,6 @@
     $resultado = mysqli_query($conexion, $sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
             echo '
-            <div id="tarjetas">
             <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
             <div id="parte1">
             <h2>'.$fila['titulo'].'</h2>
@@ -60,12 +96,9 @@
             </div>
             <div id="parte2" >
             <p>'.$fila['contenido'].'</p>
-            <p>Notas: '.$fila['notas'].'</p>
-           <p>Autor: '.$fila['autor'].'</p>            
-           
+            <p>Notas: '.$fila['notas'].'</p>            
             </div>
-            <button id="cerrar" onclick="cerrar('.$fila['id'].')">Cerrar</button>
-            </div>
+            <button id="cerrar" onclick="cerrar_tarjetas('.$fila['id'].')">Cerrar</button>
             </div>
            ';
           };

@@ -1,6 +1,6 @@
 
-.CN, .M, .CS, .LL {
-    background-color: #4912129c;
+.CN, .M, .CS, .LL, .materias button, .mostrar_materias {
+    background-color: #1249489c;
     color: white;
     border: none;
     border-radius: 12px;
@@ -10,31 +10,58 @@
     font-size: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-    border: 3px solid  #fffaffff; 
-     
-    
+    border: 3px solid  #fffaffff;     
 }
-.CN:hover, .M:hover, .CS:hover, .LL:hover {
-    background-color: #36100e;
+.mostrar_materias{
+    background-color: #1249489c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    border: 3px solid  #fffaffff;     
+}
+.botones_materia{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.CN:hover, .M:hover, .CS:hover, .LL:hover, .materias button:hover, .mostrar_materias:hover {
+    background-color: #0e3635;
+}
+.materias{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 #botones{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+#tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
 .tarjeta{
+    width: 90vw;
     font-size: 120%;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(78, 78, 78);
-    padding: 1vw;
-    justify-content: center;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    
 }
 .tarjeta button{
-
-    background-color: #4b00009c;
+    width: 100vw;
+    background-color: #1249489c;
     color: white;
     border: none;
     border-radius: 12px;
@@ -44,25 +71,25 @@
     font-size: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-    border: 3px solid  #fffaffff;
+        border: 3px solid  #fffaffff;
 }
 #parte1, #parte2{
-    background-color:#4b00009c;
-    width: 43vw;
+    background-color: #1249489c;
+    width: 44%;
     color: whitesmoke;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    padding: 1%;
     border: 3px solid whitesmoke;
+    margin: 1%;
     border-radius: 5px;
-    padding: 2%;
-    margin: 0.2%;
 }
 
 .tarjeta button:hover{
-    background-color: #4a0909;
+    background-color: #0e3635;
 }
 #imagen{
     max-width:  25vw;
@@ -75,7 +102,7 @@
         
     }
     #imagen, #parte1 h2{
-        width: 46vw;
+        width: 40vw;
         height: fit-content;
     }
     
