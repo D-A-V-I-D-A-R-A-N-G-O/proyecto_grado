@@ -14,15 +14,16 @@
 }
 .botones_materia{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
-
 }
 .CN:hover, .M:hover, .CS:hover, .LL:hover {
     background-color: #0e3635;
 }
 .materias{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 #botones{

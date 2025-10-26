@@ -1,4 +1,4 @@
-function mostrar(id) {
+function mostrar_tarjetas(id) {
     let tarjeta = document.getElementById(id);
     let botones = document.querySelectorAll(
         "#botones_ciencias button, #botones_sociales button, #botones_literatura button, #botones_matematicas button"
@@ -7,15 +7,15 @@ function mostrar(id) {
     botones.forEach(boton => boton.style.display = "none");
 }
 
-function cerrar(id) {
+function cerrar_tarjetas(id) {
     let targeta = document.getElementById(id);
-let botones = document.querySelectorAll(
+    let botones = document.querySelectorAll(
         "#botones_ciencias button, #botones_sociales button, #botones_literatura button, #botones_matematicas button"
     );
     targeta.style.display = "none";
     botones.forEach(boton => boton.style.display = "flex");
 }
-function filtrar(tipo) {
+function mostrar_botones_tarjetas(tipo) {
     let sociales = document.getElementById("botones_sociales");
     let lenguaje = document.getElementById("botones_literatura");
     let matematicas = document.getElementById("botones_matematicas");

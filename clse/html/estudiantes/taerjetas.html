@@ -28,19 +28,19 @@
             <h1>Bienvenido a la sección de Tarjetas</h1>
             <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
             <div class="materias" id="materias">
-              <button onclick="filtrar('CN')">Ciencias Naturales</button>
-              <button onclick="filtrar('M')">Matematicas</button>
-              <button onclick="filtrar('CS')">Ciencias Sociales</button>
-              <button onclick="filtrar('LL')">Literatura y Lenguaje</button>
+              <button onclick="mostrar_botones_tarjetas('CN')">Ciencias Naturales</button>
+              <button onclick="mostrar_botones_tarjetas('M')">Matematicas</button>
+              <button onclick="mostrar_botones_tarjetas('CS')">Ciencias Sociales</button>
+              <button onclick="mostrar_botones_tarjetas('LL')">Literatura y Lenguaje</button>
             </div>
             <div class="botones_materia" id="botones_ciencias" style="display: none;">
-                <button class="CN" onclick="mostrar(16)">Fotosíntesis</button><button class="CN" onclick="mostrar(17)">Sistema Nervioso Humano</button><button class="CN" onclick="mostrar(18)">Ecosistemas</button>            </div>
+                <button class="CN" onclick="mostrar_tarjetas(16)">Fotosíntesis</button><button class="CN" onclick="mostrar_tarjetas(17)">Sistema Nervioso Humano</button><button class="CN" onclick="mostrar_tarjetas(18)">Ecosistemas</button>            </div>
             <div class="botones_materia" id="botones_sociales" style="display: none;">
-                <button class="CS" onclick="mostrar(19)">La Revolución Industrial</button><button class="CS" onclick="mostrar(20)">La Independencia de América Latina</button><button class="CS" onclick="mostrar(21)">Globalización</button>            </div>
+                <button class="CS" onclick="mostrar_tarjetas(19)">La Revolución Industrial</button><button class="CS" onclick="mostrar_tarjetas(20)">La Independencia de América Latina</button><button class="CS" onclick="mostrar_tarjetas(21)">Globalización</button>            </div>
             <div class="botones_materia" id="botones_literatura" style="display: none;">
-                <button class="LL" onclick="mostrar(25)">Figuras Literarias</button><button class="LL" onclick="mostrar(26)">Tipos de Narrador</button><button class="LL" onclick="mostrar(27)">El Realismo Literario</button>            </div>
+                <button class="LL" onclick="mostrar_tarjetas(25)">Figuras Literarias</button><button class="LL" onclick="mostrar_tarjetas(26)">Tipos de Narrador</button><button class="LL" onclick="mostrar_tarjetas(27)">El Realismo Literario</button>            </div>
             <div class="botones_materia" id="botones_matematicas" style="display: none;">
-                <button class="M" onclick="mostrar(22)">Teorema de Pitágoras</button><button class="M" onclick="mostrar(23)">Funciones Matemáticas</button><button class="M" onclick="mostrar(24)">Probabilidad</button>            </div>
+                <button class="M" onclick="mostrar_tarjetas(22)">Teorema de Pitágoras</button><button class="M" onclick="mostrar_tarjetas(23)">Funciones Matemáticas</button><button class="M" onclick="mostrar_tarjetas(24)">Probabilidad</button>            </div>
 
             <div id="tarjetas">
             
@@ -191,6 +191,6 @@
           </div>
         </section>
 </body>
-<script src="../../funciones/mostrar.js"></script>
+<script src="../../funciones/mostrar_tarjetas.js"></script>
 
 </html>
