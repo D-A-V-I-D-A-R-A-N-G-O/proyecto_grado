@@ -43,7 +43,7 @@
             <input type="text" name="notas" required>
             <p>imgURL</p>
             <input type="url" name="imgURL" id="imgUrl" required>
-            <input type="hidden" value="David Arango Valencia" name="creador">
+            <?php echo '<input type="hidden" value="'.$_SESSION['nombre'].'" name="creador">'; ?>
             <label>
                 Seleccione la materia
                 <select name="materia" required>
