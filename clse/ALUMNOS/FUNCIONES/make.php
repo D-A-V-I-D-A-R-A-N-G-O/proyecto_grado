@@ -18,23 +18,15 @@ if (isset($_POST['crear'])) {
         if ($rol === 'DOCENTE') {
             echo "<script>
             alert('Tarjeta creada con éxito');
-            window.location = '../html/profesores/tarjetas.php';
+            window.location = '../PHP/tarjetas.php';
             </script>";
             exit();
-        }elseif ($rol === 'ALUMNO') {
-        echo "<script>
-        alert('Tarjeta creada con éxito');
-        window.location = '../html/estudiantes/tarjetas.php';
-        </script>";
-        }
-        
-        exit();
     } else {
         echo "<script>
         alert('No se pudo crear la tarjeta');
-        window.location = '../html/estudiantes/inicio.php';
+        window.location = '../PHP/tarjetas.php';
         </script>";
         exit();  
     }
-}
+}}
 ?>

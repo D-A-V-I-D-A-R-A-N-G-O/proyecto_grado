@@ -1,9 +1,9 @@
 
 <?php 
-    include("../../funciones/connect.php");
+    include("../FUNCIONES/connect.php");
     session_start();
   if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'DOCENTE') {
-    header("Location: ../../index.php");
+    header("Location: ../../INDEX/");
     exit();
 }
 
@@ -14,9 +14,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
-    <link rel="stylesheet" href="../../css/navegacion.css">
-    <link rel="stylesheet" href="../../css/contenido.css">
-    <link rel="stylesheet" href="../../css/targetas.css">
+    <link rel="stylesheet" href="../CSS/navegacion.css">
+    <link rel="stylesheet" href="../CSS/contenido.css">
+    <link rel="stylesheet" href="../CSS/targetas.css">
     <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
 </head>
 <body>
@@ -28,7 +28,8 @@
         <a id="boton" href="./inicio.php">Inicio</a>
         <a id="boton" href="./tarjetas.php">Tarjetas</a>
         <a id="boton" href="./crear.php">Crear</a>
-        <a id="out" href="../../index.php"><img id="salir" src="../../img/logout.jpg" alt=""></a>
+        <a id="out" href="../../INDEX/"><img id="salir" src="../../img/logout.jpg" alt=""></a>
+        </div>
 </header>
 
 
@@ -99,6 +100,7 @@
             <p>Notas: '.$fila['notas'].'</p>            
             </div>
             <button id="cerrar" onclick="cerrar_tarjetas('.$fila['id'].')">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta('.$fila['id'].')">Eliminar</button>
             </div>
            ';
           };
@@ -107,6 +109,7 @@
           </div>
         </section>
 </body>
-<script src="../../funciones/mostrar.js"></script>
+<script src="../FUNCIONES/mostrar.js"></script>
+
 
 </html>
