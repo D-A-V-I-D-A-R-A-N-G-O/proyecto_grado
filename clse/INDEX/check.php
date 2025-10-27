@@ -25,7 +25,7 @@ include("connect.php");
         }else {
             echo "<script>
             alert('Usuario o contraseña incorrecta');
-            window.location = '../index.php';
+            window.location = './index.php';
             </script>";
         }
     }
