@@ -3,39 +3,37 @@
 body::before {
     content: "";
     position: fixed;
+    background-image: url("../img/fondo-index.webp");
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
     background-image: url("../img/fondo-index.webp");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+     width: 100vw;
+    height: 100vh;
     filter: blur(8px); /* Ajusta el valor según lo que necesites */
     z-index: -1;
 }
 body {
-      font-family: monospace;
-flex-direction: column;
+     font-family: monospace;
     background-color: #000000;
+    padding: 0px;
+    margin: 0px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0%;
-    margin: 0%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 form{
-    font-size: 130%;
+    font-size: 170%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items:center;
     text-transform: uppercase;
-    margin-right: 10%;
-    margin-left: 10%;
-    margin-top: 10%;
-    width: 250px;
-    height: 250px;
+   
+    width: 350px;
+    height: 350px;
     color: whitesmoke;
     text-shadow: #124948 1px 1px 2px;
     background: #17A65D;
@@ -74,7 +72,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 120%;
+    font-size: 180%;
     background-color: #1249489c;
     text-shadow: #000000 1px 1px 2px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -82,3 +80,21 @@ header{
     border-bottom: 2px solid #b1e772;
 
 }
+div{
+    height: 70vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 600px) {
+    form{
+        font-size: 140%;
+        width: 250px;
+        height: 250px;
+    }
+    header{
+        font-size: 120%;
+    }
+}
+
