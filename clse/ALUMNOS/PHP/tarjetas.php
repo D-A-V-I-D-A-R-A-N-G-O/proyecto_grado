@@ -107,6 +107,6 @@
           </div>
         </section>
 </body>
-<script src="../funciones/mostrar.js"></script>
+<script src="../FUNCIONES/mostrar.js"></script>
 
 </html>
