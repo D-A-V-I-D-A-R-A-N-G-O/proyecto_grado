@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenidos a FlashCards</h1>
+        <h1 class="titulo">Bienvenidos a FlashCards</h1>
     </header>
 
     <div>
@@ -21,7 +21,7 @@
             <input id="user" type="text" maxlength="10" placeholder="usuario" name="name" required>
             <p>Ingresa la contraseña</p>
             <input id="password" type="password" maxlength="10" placeholder="contraseña" name="password" required>
-            <input type="submit" id="check"  name="entrar">
+            <input type="submit" id="check"  name="entrar"  value="¡Aprende ahora!" >
         </form>
     </div>
       

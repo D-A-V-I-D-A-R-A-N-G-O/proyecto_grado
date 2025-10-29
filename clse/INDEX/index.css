@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
 
 body::before {
+   
     content: "";
     position: fixed;
     background-image: url("../img/fondo-index.webp");
@@ -46,6 +47,17 @@ form{
     margin-top: 10%;
     background-color: #30bebc;
     border-bottom: 2px solid #b1e772;
+    padding: 10px;
+      text-shadow:
+       
+   
+    -2px 2px 0px #30bebc; 
+    
+    
+}
+#check:hover{
+    color: rgb(174, 231, 243);
+    background-color: #124948;
 }
 
 input{
@@ -96,5 +108,22 @@ div{
     header{
         font-size: 120%;
     }
+}
+
+h1{
+ 
+   font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #ffffff,#30bebc); 
+  background-clip: text;
+  -webkit-background-clip: text;     
+  color: transparent;                
+  -webkit-text-fill-color: transparent;
+   text-shadow:
+    2px 2px 0px #b1e772,   
+    -2px -2px 0px #124948,
+    2px -2px 0px #17a65d,  
+    -2px 2px 0px #30bebc; 
 }
 
