@@ -89,38 +89,42 @@
              $sql = "SELECT * FROM flashcards" ;
     $resultado = mysqli_query($conexion, $sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
-            echo '
-            <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
-            <div id="parte1">
-            <h2>'.$fila['titulo'].'</h2>
-            <img id="imagen" src="'.$fila['imgURL'].'" alt="">          
-            </div>
-            <div id="parte2" >
-            <p>'.$fila['contenido'].'</p>
-            <p>Notas: '.$fila['notas'].'</p>            
-            </div>
-            <div id="botones_tarjetas">
-            <button id="cerrar" onclick="cerrar_tarjetas('.$fila['id'].')">Cerrar</button>
-            <button id="eliminar" onclick="eliminar_tarjeta('.$fila['id'].')">Eliminar</button>
-            <button id="editar" onclick="editar_tarjeta('.$fila['id'].')">Editar</button>            
-            </div>
-            <div>
-            <form action="../FUNCIONES/editar.php" method="POST" name="editar">
+        echo '
+<div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
+    <div id="parte1'.$fila['id'].' class="parte1">
+        <h2>'.$fila['titulo'].'</h2>
+        <img id="imagen" src="'.$fila['imgURL'].'" alt="">          
+    </div>
+    <div id="parte2'.$fila['id'].' class="parte2">
+        <p>'.$fila['contenido'].'</p>
+        <p>Notas: '.$fila['notas'].'</p>            
+    </div>
+
+    <div id="botones_tarjetas'.$fila['id'].'">
+        <button id="cerrar" onclick="cerrar_tarjetas('.$fila['id'].')">Cerrar</button>
+        <button id="eliminar" onclick="eliminar_tarjeta('.$fila['id'].')">Eliminar</button>
+        <button id="editar" onclick="editar_tarjeta('.$fila['id'].')">Editar</button>            
+    </div>
+
+    <div id="formu'.$fila['id'].'" class="formulario" style="display:none;">
+        <form action="../FUNCIONES/editar.php" method="POST" name="editar">
             <p>Título</p>
             <input type="text" maxlength="40" name="titulo" value="'.$fila['titulo'].'" required>
             <p>Contenido</p>
-            <textarea type="text" name="contenido" id="contenido" row="10"  size="50"  required>'.$fila['contenido'].'</textarea>
+            <textarea name="contenido" rows="5" required>'.$fila['contenido'].'</textarea>
             <p>Notas</p>
             <input type="text" name="notas" value="'.$fila['notas'].'" required>
             <p>imgURL</p>
-            <input type="url" name="imgURL" id="imgUrl" value="'.$fila['imgURL'].'" required>
-            <input type="hidden" value="'.$_SESSION['rol'].'" name="rol">
-            <input type="hidden" value="'.$fila['id'].'" name="id">
-            <input type="submit" class="botonn" name="editar" value="Editar">
-            </form>    
-            </div>
-            </div>
-           ';
+            <input type="url" name="imgURL" value="'.$fila['imgURL'].'" required>
+            <input type="hidden" name="rol" value="'.$_SESSION['rol'].'">
+            <input type="hidden" name="id" value="'.$fila['id'].'">
+            <input type="submit" class="botonn" name="editar" value="Guardar cambios">
+        </form>    
+        <button class="cerrar-form" onclick="cerrar_form('.$fila['id'].')">Cerrar formulario</button>
+    </div>
+</div>
+';
+
           };
           ?>
           </div>
@@ -128,6 +132,5 @@
         </section>
 </body>
 <script src="../FUNCIONES/mostrar.js"></script>
-
 
 </html>

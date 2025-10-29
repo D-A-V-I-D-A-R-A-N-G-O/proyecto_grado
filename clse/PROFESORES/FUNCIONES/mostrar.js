@@ -80,3 +80,18 @@ function eliminar_tarjeta(id) {
         window.location.reload();
     }
 }
+function editar_tarjeta(id) {
+    document.getElementById("parte1" + id).style.display = "none";
+    document.getElementById("parte2" + id).style.display = "none";
+    document.getElementById("botones_tarjetas" + id).style.display = "none";
+
+    document.getElementById("formu" + id).style.display = "block";
+}
+
+function cerrar_form(id) {
+    document.getElementById("parte1" + id).style.display = "flex";
+    document.getElementById("parte2" + id).style.display = "flex";
+    document.getElementById("botones_tarjetas" + id).style.display = "flex";
+    document.getElementById("formu" + id).style.display = "none";
+}
+

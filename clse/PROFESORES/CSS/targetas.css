@@ -73,7 +73,7 @@
     transition: background-color 0.3s ease;
         border: 3px solid  #fffaffff;
 }
-#parte1, #parte2{
+.parte1, .parte2, .formulario{
     background-color: #1249489c;
     width: 44%;
     color: whitesmoke;
@@ -106,10 +106,10 @@
         height: fit-content;
     }
     
-    #parte1, #parte2{
+    .parte1, .parte2, .formulario{
         width: 80vw;
     }
-    #parte1{
+    .parte1{
         flex-wrap: wrap;
     }
 
@@ -125,5 +125,37 @@
 #cerrar, #eliminar, #editar{
     text-align: center;
     width: 25vw;
+}
+.formulario {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 10px;
+  display: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  padding: 6px;
+}
+
+.cerrar-form {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cerrar-form:hover {
+  background-color: darkred;
 }
 
