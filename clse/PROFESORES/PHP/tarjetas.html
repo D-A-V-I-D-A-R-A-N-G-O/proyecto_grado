@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio</title>
+    <link rel="stylesheet" href="../CSS/navegacion.css">
+    <link rel="stylesheet" href="../CSS/contenido.css">
+    <link rel="stylesheet" href="../CSS/targetas.css">
+    <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
+</head>
+<body>
+        <header id="cabeza">
+          <div id="menu">
+            <div id="logos">
+            <img id="logo" src="../../img/image.png" alt="">
+            </div>
+        <a id="boton" href="./inicio.php">Inicio</a>
+        <a id="boton" href="./tarjetas.php">Tarjetas</a>
+        <a id="boton" href="./crear.php">Crear</a>
+        <a id="out" href="../../INDEX/"><img id="salir" src="../../img/logout.jpg" alt=""></a>
+        </div>
+</header>
+
+
+        <section class="contenido">
+          <div>
+            <h1>Bienvenido a la sección de Tarjetas</h1>
+            <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
+            <div class="materias" id="materias">
+              <button onclick="mostrar_botones_tarjetas('CN')">Ciencias Naturales</button>
+              <button onclick="mostrar_botones_tarjetas('M')">Matematicas</button>
+              <button onclick="mostrar_botones_tarjetas('CS')">Ciencias Sociales</button>
+              <button onclick="mostrar_botones_tarjetas('LL')">Literatura y Lenguaje</button>
+            </div>
+            <div class="botones_materia" id="botones_ciencias" style="display: none;">
+                <button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button><button class="CN" onclick="mostrar_tarjetas(16)">Fotosíntesis</button><button class="CN" onclick="mostrar_tarjetas(17)">Sistema Nervioso Humano</button><button class="CN" onclick="mostrar_tarjetas(18)">Ecosistemas</button>            </div>
+            <div class="botones_materia" id="botones_sociales" style="display: none;">
+                <button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button><button class="CS" onclick="mostrar_tarjetas(19)">La Revolución Industrial</button><button class="CS" onclick="mostrar_tarjetas(20)">La Independencia de América Latina</button><button class="CS" onclick="mostrar_tarjetas(21)">Globalización</button>            </div>
+            <div class="botones_materia" id="botones_literatura" style="display: none;">
+                <button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button><button class="LL" onclick="mostrar_tarjetas(25)">Figuras Literarias</button><button class="LL" onclick="mostrar_tarjetas(26)">Tipos de Narrador</button><button class="LL" onclick="mostrar_tarjetas(27)">El Realismo Literario</button>            </div>
+            <div class="botones_materia" id="botones_matematicas" style="display: none;">
+                <button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button><button class="M" onclick="mostrar_tarjetas(22)">Teorema de Pitágoras</button><button class="M" onclick="mostrar_tarjetas(23)">Funciones Matemáticas</button><button class="M" onclick="mostrar_tarjetas(24)">Probabilidad</button>            </div>
+
+            <div id="tarjetas">
+            
+            <div id="16" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>Fotosíntesis</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Photosynthesis_equation.svg" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>La fotosíntesis es un proceso biológico mediante el cual las plantas, algas y algunas bacterias transforman la energía de la luz solar en energía química. Este proceso ocurre en los cloroplastos, donde la clorofila captura la luz solar para convertir dióxido de carbono (CO₂) y agua (H₂O) en glucosa (C₆H₁₂O₆) y oxígeno (O₂). Gracias a la fotosíntesis, se mantiene el equilibrio del oxígeno en la atmósfera y se sustenta la vida en la Tierra.</p>
+            <p>Notas: El proceso opuesto es la respiración celular.</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(16)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(16)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(16)">Editar</button>            
+            </div>
+            </div>
+           
+            <div id="17" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>Sistema Nervioso Humano</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Nervous_system_diagram.png" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>El sistema nervioso controla y coordina las funciones del cuerpo. Está formado por el sistema nervioso central (encéfalo y médula espinal) y el sistema nervioso periférico (nervios que conectan con el resto del cuerpo). Sus principales funciones son recibir estímulos, procesar información y generar respuestas adecuadas. Permite desde acciones simples como mover un músculo hasta procesos complejos como pensar o recordar.</p>
+            <p>Notas: Las neuronas son las unidades básicas de transmisión de información.</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(17)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(17)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(17)">Editar</button>            
+            </div>
+            </div>
+           
+            <div id="18" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>Ecosistemas</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Ecosystem_diagram.jpg" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>Un ecosistema es un conjunto de organismos vivos (biocenosis) y el entorno físico donde viven (biotopo), que interactúan entre sí. Los ecosistemas pueden ser terrestres o acuáticos, y dentro de ellos se establecen relaciones como la depredación, el mutualismo o la competencia. Cada organismo cumple un rol ecológico, y los ecosistemas mantienen su equilibrio gracias al flujo de energía y al ciclo de los nutrientes.</p>
+            <p>Notas: El equilibrio ecológico puede romperse por la contaminación o la deforestación.</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(18)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(18)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(18)">Editar</button>            
+            </div>
+            </div>
+           
+            <div id="19" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>La Revolución Industrial</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/3/37/Powerloom_weaving_factory_1835.jpg" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>La Revolución Industrial fue un proceso de transformación económica, social y tecnológica que comenzó en Inglaterra en el siglo XVIII. Se caracterizó por el uso de nuevas máquinas, el desarrollo de fábricas y el crecimiento urbano. Esta revolución cambió radicalmente las formas de trabajo, la producción y la estructura social, dando origen al capitalismo moderno y a la sociedad industrial.</p>
+            <p>Notas: Introdujo la máquina de vapor y la producción en masa.</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(19)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(19)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(19)">Editar</button>            
+            </div>
+            </div>
+           
+            <div id="20" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>La Independencia de América Latina</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Battle_of_Ayacucho.png" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>Fue un proceso histórico en el que los pueblos latinoamericanos se liberaron del dominio colonial español entre los siglos XVIII y XIX. Inspirados en las ideas de libertad y derechos humanos, surgieron líderes como Simón Bolívar, José de San Martín y Miguel Hidalgo. Las guerras de independencia transformaron el mapa político del continente, dando origen a las repúblicas modernas.</p>
+            <p>Notas: En Colombia, la independencia se consolidó en la Batalla de Boyacá (1819).</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(20)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(20)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(20)">Editar</button>            
+            </div>
+            </div>
+           
+            <div id="21" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>Globalización</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Globalization_internet_network.png" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>La globalización es un proceso de interconexión económica, tecnológica, política y cultural entre los países del mundo. Implica la expansión del comercio internacional, el avance de las telecomunicaciones y la difusión cultural. Aunque facilita el acceso a bienes y conocimiento, también genera desigualdades y homogeneización cultural.</p>
+            <p>Notas: Internet es uno de los principales motores de la globalización moderna.</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(21)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(21)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(21)">Editar</button>            
+            </div>
+            </div>
+           
+            <div id="22" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>Teorema de Pitágoras</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Pythagorean.svg" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>El teorema de Pitágoras establece que, en un triángulo rectángulo, el cuadrado de la hipotenusa (el lado opuesto al ángulo recto) es igual a la suma de los cuadrados de los catetos. Su fórmula es: a² + b² = c². Este teorema es fundamental en la geometría y se aplica en la arquitectura, navegación y física.</p>
+            <p>Notas: Funciona solo en triángulos rectángulos.</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(22)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(22)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(22)">Editar</button>            
+            </div>
+            </div>
+           
+            <div id="23" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>Funciones Matemáticas</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Linear_equation_graph.svg" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>Una función es una relación entre dos conjuntos en la que a cada valor del conjunto de entrada (dominio) le corresponde exactamente un valor del conjunto de salida (rango). Se representa como f(x). Las funciones pueden ser lineales, cuadráticas, exponenciales o trigonométricas. Su estudio permite modelar fenómenos naturales y resolver problemas en física o economía.</p>
+            <p>Notas: La forma general de una función lineal es f(x) = mx + b.</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(23)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(23)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(23)">Editar</button>            
+            </div>
+            </div>
+           
+            <div id="24" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>Probabilidad</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Probability_diagram.png" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>La probabilidad mide la posibilidad de que ocurra un evento. Se calcula dividiendo los casos favorables entre los casos posibles, siempre que todos sean igualmente probables. Se expresa con valores entre 0 (imposible) y 1 (seguro). Es una herramienta clave para la estadística, la ciencia de datos y la toma de decisiones bajo incertidumbre.</p>
+            <p>Notas: P(evento) = casos favorables / casos posibles.</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(24)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(24)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(24)">Editar</button>            
+            </div>
+            </div>
+           
+            <div id="25" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>Figuras Literarias</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Book_and_pen.jpg" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>Son recursos del lenguaje que los autores usan para embellecer o dar expresividad a sus textos. Entre las más comunes están la metáfora (comparar sin usar “como”), la hipérbole (exageración), la anáfora (repetición al inicio de frases) y la personificación (atribuir cualidades humanas a objetos o animales). Su uso hace que los textos sean más artísticos y emotivos.</p>
+            <p>Notas: Usadas principalmente en poesía y literatura narrativa.</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(25)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(25)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(25)">Editar</button>            
+            </div>
+            </div>
+           
+            <div id="26" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>Tipos de Narrador</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Storytelling_illustration.jpg" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>El narrador es quien cuenta la historia en una obra literaria. Puede ser protagonista (cuenta en primera persona), testigo (observa los hechos) o omnisciente (conoce todo lo que ocurre y lo que piensan los personajes). El tipo de narrador influye en la perspectiva y la comprensión del lector.</p>
+            <p>Notas: El narrador omnisciente es el más común en novelas clásicas.</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(26)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(26)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(26)">Editar</button>            
+            </div>
+            </div>
+           
+            <div id="27" class="tarjeta" style="display:none;"> 
+            <div id="parte1">
+            <h2>El Realismo Literario</h2>
+            <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Reading_books_illustration.png" alt="">          
+            </div>
+            <div id="parte2" >
+            <p>Movimiento literario del siglo XIX que buscaba representar la realidad de forma objetiva y detallada. Los autores realistas se interesaban por los problemas sociales, la vida cotidiana y los personajes comunes. Se oponía al Romanticismo, que se centraba en los sentimientos y la imaginación.</p>
+            <p>Notas: Grandes autores: Gustave Flaubert y Benito Pérez Galdós.</p>            
+            </div>
+            <div id="botones_tarjetas">
+            <button id="cerrar" onclick="cerrar_tarjetas(27)">Cerrar</button>
+            <button id="eliminar" onclick="eliminar_tarjeta(27)">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta(27)">Editar</button>            
+            </div>
+            </div>
+                     </div>
+          </div>
+        </section>
+</body>
+<script src="../FUNCIONES/mostrar.js"></script>
+
+
+</html>
+
+     <form action="../FUNCIONES/editar.php" method="POST" name="editar">
+            <p>Título</p>
+            <input type="text" maxlength="40" name="titulo" placeholder="'.$fila['titulo'].'" required>
+            <p>Contenido</p>
+            <textarea type="text" name="contenido" id="contenido" row="10"  size="50" placeholder="'.$fila['contenido'].'" required></textarea>
+            <p>Notas</p>
+            <input type="text" name="notas" placeholder="'.$fila['notas'].' required>
+            <p>imgURL</p>
+            <input type="url" name="imgURL" id="imgUrl" placeholder="'.$fila['imgURL'].' required>
+            <input type="hidden" value="'.$fila['id'].'" name="id">
+            <input type="submit" class="botonn" name="editar" value="Editar">
+            </form> 

@@ -99,8 +99,26 @@
             <p>'.$fila['contenido'].'</p>
             <p>Notas: '.$fila['notas'].'</p>            
             </div>
+            <div id="botones_tarjetas">
             <button id="cerrar" onclick="cerrar_tarjetas('.$fila['id'].')">Cerrar</button>
             <button id="eliminar" onclick="eliminar_tarjeta('.$fila['id'].')">Eliminar</button>
+            <button id="editar" onclick="editar_tarjeta('.$fila['id'].')">Editar</button>            
+            </div>
+            <div>
+            <form action="../FUNCIONES/editar.php" method="POST" name="editar">
+            <p>Título</p>
+            <input type="text" maxlength="40" name="titulo" value="'.$fila['titulo'].'" required>
+            <p>Contenido</p>
+            <textarea type="text" name="contenido" id="contenido" row="10"  size="50"  required>'.$fila['contenido'].'</textarea>
+            <p>Notas</p>
+            <input type="text" name="notas" value="'.$fila['notas'].'" required>
+            <p>imgURL</p>
+            <input type="url" name="imgURL" id="imgUrl" value="'.$fila['imgURL'].'" required>
+            <input type="hidden" value="'.$_SESSION['rol'].'" name="rol">
+            <input type="hidden" value="'.$fila['id'].'" name="id">
+            <input type="submit" class="botonn" name="editar" value="Editar">
+            </form>    
+            </div>
             </div>
            ';
           };

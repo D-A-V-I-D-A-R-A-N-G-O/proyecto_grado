@@ -114,4 +114,16 @@
     }
 
 }
+#botones_tarjetas{
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+#cerrar, #eliminar, #editar{
+    text-align: center;
+    width: 25vw;
+}
 
