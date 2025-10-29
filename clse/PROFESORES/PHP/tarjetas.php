@@ -91,11 +91,11 @@
             while ($fila = mysqli_fetch_assoc($resultado)) {
         echo '
 <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
-    <div id="parte1'.$fila['id'].' class="parte1">
+    <div id="parte1'.$fila['id'].'" class="parte1">
         <h2>'.$fila['titulo'].'</h2>
         <img id="imagen" src="'.$fila['imgURL'].'" alt="">          
     </div>
-    <div id="parte2'.$fila['id'].' class="parte2">
+    <div id="parte2'.$fila['id'].'" class="parte2">
         <p>'.$fila['contenido'].'</p>
         <p>Notas: '.$fila['notas'].'</p>            
     </div>
