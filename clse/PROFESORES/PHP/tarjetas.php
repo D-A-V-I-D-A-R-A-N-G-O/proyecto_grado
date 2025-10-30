@@ -113,7 +113,7 @@
             <p>Contenido</p>
             <textarea name="contenido" rows="5" required>'.$fila['contenido'].'</textarea>
             <p>Notas</p>
-            <input type="text" name="notas" value="'.$fila['notas'].'" required>
+            <textarea type="text" name="notas" required>'.$fila['notas'].'</textarea>
             <p>imgURL</p>
             <input type="url" name="imgURL" value="'.$fila['imgURL'].'" required>
             <input type="hidden" name="rol" value="'.$_SESSION['rol'].'">

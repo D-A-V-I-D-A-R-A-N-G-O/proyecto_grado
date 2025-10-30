@@ -85,7 +85,7 @@ function editar_tarjeta(id) {
     document.getElementById("parte2" + id).style.display = "none";
     document.getElementById("botones_tarjetas" + id).style.display = "none";
 
-    document.getElementById("formu" + id).style.display = "block";
+    document.getElementById("formu" + id).style.display = "flex";
 }
 
 function cerrar_form(id) {
