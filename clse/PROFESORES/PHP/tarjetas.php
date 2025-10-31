@@ -89,23 +89,30 @@
              $sql = "SELECT * FROM flashcards" ;
     $resultado = mysqli_query($conexion, $sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
-        echo '
+echo '
 <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
     <div id="parte1'.$fila['id'].'" class="parte1">
         <h2>'.$fila['titulo'].'</h2>
         <img id="imagen" src="'.$fila['imgURL'].'" alt="">          
     </div>
+
+    <!-- PARTE 2 -->
     <div id="parte2'.$fila['id'].'" class="parte2">
         <p>'.$fila['contenido'].'</p>
         <p>Notas: '.$fila['notas'].'</p>            
     </div>
 
+    <!-- BOTONES PRINCIPALES -->
     <div id="botones_tarjetas'.$fila['id'].'">
         <button id="cerrar" onclick="cerrar_tarjetas('.$fila['id'].')">Cerrar</button>
         <button id="eliminar" onclick="eliminar_tarjeta('.$fila['id'].')">Eliminar</button>
-        <button id="editar" onclick="editar_tarjeta('.$fila['id'].')">Editar</button>            
+        <button id="editar" onclick="editar_tarjeta('.$fila['id'].')">Editar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta('.$fila['id'].')">Comentar</button>
     </div>
 
+    <!-- FORMULARIO EDITAR -->
     <div id="formu'.$fila['id'].'" class="formulario" style="display:none;">
         <form action="../FUNCIONES/editar.php" method="POST" name="editar">
             <p>Título</p>
@@ -113,7 +120,7 @@
             <p>Contenido</p>
             <textarea name="contenido" rows="5" required>'.$fila['contenido'].'</textarea>
             <p>Notas</p>
-            <textarea type="text" name="notas" required>'.$fila['notas'].'</textarea>
+            <textarea name="notas" required>'.$fila['notas'].'</textarea>
             <p>imgURL</p>
             <input type="url" name="imgURL" value="'.$fila['imgURL'].'" required>
             <input type="hidden" name="rol" value="'.$_SESSION['rol'].'">
@@ -122,8 +129,20 @@
         </form>    
         <button class="cerrar-form" onclick="cerrar_form('.$fila['id'].')">Cerrar formulario</button>
     </div>
-</div>
-';
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario'.$fila['id'].'" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="'.$fila['id'].'">
+            <input type="hidden" name="rol" value="'.$_SESSION['rol'].'">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario('.$fila['id'].')">Cerrar comentario</button>
+    </div>
+</div>';
+
 
           };
           ?>

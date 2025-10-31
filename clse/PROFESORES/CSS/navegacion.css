@@ -1,74 +1,80 @@
-/* --jet: #303036ff;
---process-cyan: #30bcedff;
---ghost-white: #fffaffff;
---tomato: #fc5130ff; 
---black: #050401ff; */
+/* Nueva paleta rojiza:
+--vino: #8B2F2F;
+--rojo-suave: #A63A3A;
+--beige: #FFF5EC;
+--borde-rosado: #FFD6C2;
+--negro-suave: #1A1A1A;
+*/
 
-body{
+body {
     padding-top: 0%;
     margin: 0%;
-    background-image: url("../../img/fonfo-estudiantes.jpg");
+    background-image: url("../../img/fonfo-estudiantes.jpg"); /* puedes cambiar el fondo si quieres diferenciarlo */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     font-family: monospace;
-  
 }
-#logo{
+
+#logo {
     margin: 5px;
     width: 70%;
     height: 70%;
-
 }
-#logos{
+
+#logos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: white;
+    background-color: #FFF5EC;
     border-radius: 600px;
     height: 85px;
     width: 85px;
 }
-#salir{
+
+#salir {
     filter: invert(1);
     width: 10vh;
-   border-radius: 600px;
-       transition: background-color 0.3s ease;
+    border-radius: 600px;
+    transition: background-color 0.3s ease;
 }
-#salir:hover{
-    background-color: rgb(0, 204, 255);
-    border-radius: 200px;
-}
-#out{
-    background-color:  transparent;
+
+#salir:hover {
+    background-color: #A63A3A; /* rojo suave */
     border-radius: 200px;
 }
 
-#menu{
+#out {
+    background-color: transparent;
+    border-radius: 200px;
+}
+
+#menu {
     padding: 0%;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;       
-    height: 100%;             
+    flex-wrap: wrap;
+    height: 100%;
 }
-#cabeza{
-    padding: 1.5vh ;
+
+#cabeza {
+    padding: 1.5vh;
     position: fixed;
     top: 0px;
     display: flex;
     margin: 0px;
     height: 11.5vh;
     width: 100vw;
-    background-color: #1249489c;
+    background-color: rgba(139, 47, 47, 0.7); /* vino translúcido */
     text-shadow: #000000 1px 1px 2px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(5px);
-    border-bottom: 2px solid #b1e772;
+    border-bottom: 2px solid #FFD6C2; /* borde claro cálido */
 }
 
-#boton{
+#boton {
     display: flex;
     align-content: center;
     flex-direction: column-reverse;
@@ -77,38 +83,36 @@ body{
     width: 19vw;
     height: 8vh;
     text-align: center;
-    border: 3px solid  #fffaffff;
+    border: 3px solid #FFD6C2;
     border-radius: 5px;
     text-decoration: none;
     font-size: 200%;
-    color: #FFFAFF;
-        transition: background-color 0.3s ease;
-
+    color: #FFF5EC;
+    transition: background-color 0.3s ease;
 }
-#menu{
+
+#menu {
     width: 100%;
     display: flex;
     justify-content: space-around;
     font-size: 10px;
-    
 }
-#boton:hover{
-    background-color: #258b8a;
+
+#boton:hover {
+    background-color: #A63A3A; /* rojo medio al pasar */
 }
 
 @media (max-width: 600px) {
-    #menu{
+    #menu {
         display: flex;
         text-align: center;
         flex-wrap: wrap;
         margin: 0;
         font-size: 50%;
         align-items: center;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
     }
-    #logo, #logos{
+    #logo, #logos {
         display: none;
     }
 }
-
-

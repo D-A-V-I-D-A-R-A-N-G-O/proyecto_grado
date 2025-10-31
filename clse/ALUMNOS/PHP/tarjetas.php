@@ -99,7 +99,21 @@
             <p>Notas: '.$fila['notas'].'</p>            
             </div>
             <button id="cerrar" onclick="cerrar_tarjetas('.$fila['id'].')">Cerrar</button>
+            <button id="comentar" class="comentar" onclick="comentar_tarjeta('.$fila['id'].')">Comentar</button>
+
             </div>
+             <div id="comentario'.$fila['id'].'" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="'.$fila['id'].'">
+            <input type="hidden" name="rol" value="'.$_SESSION['rol'].'">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario('.$fila['id'].')">Cerrar comentario</button>
+    </div>
+</div>
+            
            ';
           };
           ?>
