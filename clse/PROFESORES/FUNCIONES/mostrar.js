@@ -99,12 +99,12 @@ function comentar_tarjeta(id) {
     document.getElementById("parte1" + id).style.display = "none";
     document.getElementById("parte2" + id).style.display = "none";
     document.getElementById("botones_tarjetas" + id).style.display = "none";
-    document.getElementById("comentario" + id).style.display = "block";
+    document.getElementById("comentario" + id).style.display = "flex";
 }
 
 function cerrar_comentario(id) {
-    document.getElementById("parte1" + id).style.display = "block";
-    document.getElementById("parte2" + id).style.display = "block";
+    document.getElementById("parte1" + id).style.display = "flex";
+    document.getElementById("parte2" + id).style.display = "flex";
     document.getElementById("botones_tarjetas" + id).style.display = "flex";
     document.getElementById("comentario" + id).style.display = "none";
 }

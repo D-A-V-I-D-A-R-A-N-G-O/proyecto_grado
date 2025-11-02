@@ -16,6 +16,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'DOCENTE') {
     <link rel="stylesheet" href="../CSS/navegacion.css">
     <link rel="stylesheet" href="../CSS/contenido.css">
     <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/inicio.css">
 </head>
 <body>
 <header id="cabeza">
@@ -29,7 +30,39 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'DOCENTE') {
         <a id="out" href="../../INDEX/"><img id="salir" src="../../img/logout.jpg" alt=""></a>
 </header>
 <section class="contenido">   
-     <h2>Bienvenido, <?php echo htmlspecialchars($_SESSION['name']); ?>, y soy <?php echo htmlspecialchars($_SESSION['rol']); ?></h2>
+    <?php  echo '<h2>Hola '.$_SESSION['name'].', bienvenido a FlashCards</h2>'?>
+    <div class="intro-card" role="region" aria-label="Introducción al proyecto">
+  <h2>Bienvenido</h2>
+  <p>
+    En esta página podrás encontrar material de estudio para tus principales clases,
+    como ciencias naturales, matemáticas, español y sociales.
+    También podrás crear tus propias tarjetas para almacenar tu conocimiento y compartirlo con tus profesores.
+  </p>
+
+  <p>Este proyecto fue creado con el objetivo de:</p>
+  <ul>
+    <li>Almacenar información de las clases</li>
+    <li>Compartir el conocimiento entre estudiantes</li>
+    <li>Ayudar a subir el promedio de los alumnos</li>
+    <li>Promulgar una cultura de compañerismo y estudio</li>
+  </ul>
+</div>
+
+<h2>¿Qué piensan sobre tí?</h2>
+<?php 
+        $sql = "SELECT * FROM flashcards WHERE autor = '{$_SESSION['name']}'";
+    $resultado = mysqli_query($conexion, $sql);
+            while ($fila = mysqli_fetch_assoc($resultado)) {
+    echo '
+     <div class="comentario">
+     <h3>En: '.$fila['titulo'].'</h3>
+    <p>'.$fila['comentarios'].'</p>
+</div>
+    ';
+
+};
+?>
+
 </section>
    
  
