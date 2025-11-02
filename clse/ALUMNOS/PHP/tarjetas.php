@@ -50,7 +50,7 @@
                 while ($fila = mysqli_fetch_assoc($resultado)) {
                 echo '<button class="'.$fila['tipo'].'" onclick="mostrar_tarjetas('.$fila['id'].')">'.$fila['titulo'].'</button>';
                 };
-                ?>
+                ?>4
             </div>
             <div class="botones_materia" id="botones_sociales" style="display: none;">
                 <?php
@@ -88,21 +88,29 @@
              $sql = "SELECT * FROM flashcards" ;
     $resultado = mysqli_query($conexion, $sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
-            echo '
-            <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
-            <div id="parte1">
-            <h2>'.$fila['titulo'].'</h2>
-            <img id="imagen" src="'.$fila['imgURL'].'" alt="">          
-            </div>
-            <div id="parte2" >
-            <p>'.$fila['contenido'].'</p>
-            <p>Notas: '.$fila['notas'].'</p>            
-            </div>
-            <button id="cerrar" onclick="cerrar_tarjetas('.$fila['id'].')">Cerrar</button>
-            <button id="comentar" class="comentar" onclick="comentar_tarjeta('.$fila['id'].')">Comentar</button>
+           echo '
+<div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
 
-            </div>
-             <div id="comentario'.$fila['id'].'" class="formulario-comentario" style="display:none;">
+    <!-- PARTE 1 -->
+    <div id="parte1'.$fila['id'].'" class="parte1">
+        <h2>'.$fila['titulo'].'</h2>
+        <img id="imagen" src="'.$fila['imgURL'].'" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte2'.$fila['id'].'" class="parte2">
+        <p>'.$fila['contenido'].'</p>
+        <p>Notas: '.$fila['notas'].'</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas'.$fila['id'].'">
+        <button id="cerrar" onclick="cerrar_tarjetas('.$fila['id'].')">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta('.$fila['id'].')">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario'.$fila['id'].'" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
@@ -112,9 +120,8 @@
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario('.$fila['id'].')">Cerrar comentario</button>
     </div>
-</div>
-            
-           ';
+</div>';
+
           };
           ?>
           </div>

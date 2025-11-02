@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio</title>
+    <link rel="stylesheet" href="../CSS/navegacion.css">
+    <link rel="stylesheet" href="../CSS/contenido.css">
+    <link rel="stylesheet" href="../CSS/targetas.css">
+    <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
+</head>
+<body>
+        <header id="cabeza">
+          <div id="menu">
+            <div id="logos">
+            <img id="logo" src="../../img/image.png" alt="">
+            </div>
+        <a id="boton" href="./inicio.php">Inicio</a>
+        <a id="boton" href="./tarjetas.php">Tarjetas</a>
+        <a id="boton" href="./crear.php">Crear</a>
+        <a id="out" href="../../INDEX/"><img id="salir" src="../../img/logout.jpg" alt=""></a>
+</header>
+
+
+        <section class="contenido">
+          <div>
+            <h1>Bienvenido a la sección de Tarjetas</h1>
+            <p>Aquí podrás gestionar tus tarjetas de estudio.</p>
+            <div class="materias" id="materias">
+              <button onclick="mostrar_botones_tarjetas('CN')">Ciencias Naturales</button>
+              <button onclick="mostrar_botones_tarjetas('M')">Matematicas</button>
+              <button onclick="mostrar_botones_tarjetas('CS')">Ciencias Sociales</button>
+              <button onclick="mostrar_botones_tarjetas('LL')">Literatura y Lenguaje</button>
+            </div>
+            <div class="botones_materia" id="botones_ciencias" style="display: none;">
+                <button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button><button class="CN" onclick="mostrar_tarjetas(16)">FOTO SIN Tesis 👻</button><button class="CN" onclick="mostrar_tarjetas(17)">Sistema Nervioso Humano</button><button class="CN" onclick="mostrar_tarjetas(18)">Ecosistemas</button><button class="CN" onclick="mostrar_tarjetas(40)">targeta de prueba</button>            </div>
+            <div class="botones_materia" id="botones_sociales" style="display: none;">
+                <button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button><button class="CS" onclick="mostrar_tarjetas(19)">La Revolución Industrial</button><button class="CS" onclick="mostrar_tarjetas(20)">La Independencia de América Latina</button><button class="CS" onclick="mostrar_tarjetas(21)">Globalización</button>            </div>
+            <div class="botones_materia" id="botones_literatura" style="display: none;">
+                <button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button><button class="LL" onclick="mostrar_tarjetas(25)">Figuras Literarias</button><button class="LL" onclick="mostrar_tarjetas(26)">Tipos de Narrador</button><button class="LL" onclick="mostrar_tarjetas(27)">El Realismo Literario</button>            </div>
+            <div class="botones_materia" id="botones_matematicas" style="display: none;">
+                <button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button><button class="M" onclick="mostrar_tarjetas(22)">El teorema de pitagoras</button><button class="M" onclick="mostrar_tarjetas(23)">Funciones Matemáticas</button><button class="M" onclick="mostrar_tarjetas(24)">Probabilidad</button>            </div>
+
+            <div id="tarjetas">
+            
+<div id="16" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte116" class="parte1">
+        <h2>FOTO SIN Tesis 👻</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Photosynthesis_equation.svg" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte216" class="parte2">
+        <p>La fotosíntesis es un proceso biológico mediante el cual las plantas, algas y algunas bacterias transforman la energía de la luz solar en energía química. Este proceso ocurre en los cloroplastos, donde la clorofila captura la luz solar para convertir dióxido de carbono (CO₂) y agua (H₂O) en glucosa (C₆H₁₂O₆) y oxígeno (O₂). Gracias a la fotosíntesis, se mantiene el equilibrio del oxígeno en la atmósfera y se sustenta la vida en la Tierra.</p>
+        <p>Notas: El proceso opuesto es la respiración celular.</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas16">
+        <button id="cerrar" onclick="cerrar_tarjetas(16)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(16)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario16" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="16">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(16)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="17" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte117" class="parte1">
+        <h2>Sistema Nervioso Humano</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Nervous_system_diagram.png" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte217" class="parte2">
+        <p>El sistema nervioso controla y coordina las funciones del cuerpo. Está formado por el sistema nervioso central (encéfalo y médula espinal) y el sistema nervioso periférico (nervios que conectan con el resto del cuerpo). Sus principales funciones son recibir estímulos, procesar información y generar respuestas adecuadas. Permite desde acciones simples como mover un músculo hasta procesos complejos como pensar o recordar.</p>
+        <p>Notas: Las neuronas son las unidades básicas de transmisión de información.</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas17">
+        <button id="cerrar" onclick="cerrar_tarjetas(17)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(17)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario17" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="17">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(17)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="18" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte118" class="parte1">
+        <h2>Ecosistemas</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Ecosystem_diagram.jpg" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte218" class="parte2">
+        <p>Un ecosistema es un conjunto de organismos vivos (biocenosis) y el entorno físico donde viven (biotopo), que interactúan entre sí. Los ecosistemas pueden ser terrestres o acuáticos, y dentro de ellos se establecen relaciones como la depredación, el mutualismo o la competencia. Cada organismo cumple un rol ecológico, y los ecosistemas mantienen su equilibrio gracias al flujo de energía y al ciclo de los nutrientes.</p>
+        <p>Notas: El equilibrio ecológico puede romperse por la contaminación o la deforestación.</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas18">
+        <button id="cerrar" onclick="cerrar_tarjetas(18)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(18)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario18" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="18">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(18)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="19" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte119" class="parte1">
+        <h2>La Revolución Industrial</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/3/37/Powerloom_weaving_factory_1835.jpg" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte219" class="parte2">
+        <p>La Revolución Industrial fue un proceso de transformación económica, social y tecnológica que comenzó en Inglaterra en el siglo XVIII. Se caracterizó por el uso de nuevas máquinas, el desarrollo de fábricas y el crecimiento urbano. Esta revolución cambió radicalmente las formas de trabajo, la producción y la estructura social, dando origen al capitalismo moderno y a la sociedad industrial.</p>
+        <p>Notas: Introdujo la máquina de vapor y la producción en masa.</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas19">
+        <button id="cerrar" onclick="cerrar_tarjetas(19)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(19)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario19" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="19">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(19)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="20" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte120" class="parte1">
+        <h2>La Independencia de América Latina</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Battle_of_Ayacucho.png" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte220" class="parte2">
+        <p>Fue un proceso histórico en el que los pueblos latinoamericanos se liberaron del dominio colonial español entre los siglos XVIII y XIX. Inspirados en las ideas de libertad y derechos humanos, surgieron líderes como Simón Bolívar, José de San Martín y Miguel Hidalgo. Las guerras de independencia transformaron el mapa político del continente, dando origen a las repúblicas modernas.</p>
+        <p>Notas: En Colombia, la independencia se consolidó en la Batalla de Boyacá (1819).</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas20">
+        <button id="cerrar" onclick="cerrar_tarjetas(20)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(20)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario20" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="20">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(20)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="21" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte121" class="parte1">
+        <h2>Globalización</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Globalization_internet_network.png" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte221" class="parte2">
+        <p>La globalización es un proceso de interconexión económica, tecnológica, política y cultural entre los países del mundo. Implica la expansión del comercio internacional, el avance de las telecomunicaciones y la difusión cultural. Aunque facilita el acceso a bienes y conocimiento, también genera desigualdades y homogeneización cultural.</p>
+        <p>Notas: Internet es uno de los principales motores de la globalización moderna.</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas21">
+        <button id="cerrar" onclick="cerrar_tarjetas(21)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(21)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario21" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="21">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(21)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="22" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte122" class="parte1">
+        <h2>El teorema de pitagoras</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Pythagorean.svg" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte222" class="parte2">
+        <p>El teorema de Pitágoras establece que, en un triángulo rectángulo, el cuadrado de la hipotenusa (el lado opuesto al ángulo recto) es igual a la suma de los cuadrados de los catetos. Su fórmula es: a² + b² = c². Este teorema es fundamental en la geometría y se aplica en la arquitectura, navegación y física.</p>
+        <p>Notas: Funciona solo en triángulos rectángulos.</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas22">
+        <button id="cerrar" onclick="cerrar_tarjetas(22)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(22)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario22" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="22">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(22)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="23" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte123" class="parte1">
+        <h2>Funciones Matemáticas</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Linear_equation_graph.svg" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte223" class="parte2">
+        <p>Una función es una relación entre dos conjuntos en la que a cada valor del conjunto de entrada (dominio) le corresponde exactamente un valor del conjunto de salida (rango). Se representa como f(x). Las funciones pueden ser lineales, cuadráticas, exponenciales o trigonométricas. Su estudio permite modelar fenómenos naturales y resolver problemas en física o economía.</p>
+        <p>Notas: La forma general de una función lineal es f(x) = mx + b.</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas23">
+        <button id="cerrar" onclick="cerrar_tarjetas(23)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(23)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario23" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="23">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(23)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="24" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte124" class="parte1">
+        <h2>Probabilidad</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Probability_diagram.png" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte224" class="parte2">
+        <p>La probabilidad mide la posibilidad de que ocurra un evento. Se calcula dividiendo los casos favorables entre los casos posibles, siempre que todos sean igualmente probables. Se expresa con valores entre 0 (imposible) y 1 (seguro). Es una herramienta clave para la estadística, la ciencia de datos y la toma de decisiones bajo incertidumbre.</p>
+        <p>Notas: P(evento) = casos favorables / casos posibles.</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas24">
+        <button id="cerrar" onclick="cerrar_tarjetas(24)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(24)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario24" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="24">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(24)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="25" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte125" class="parte1">
+        <h2>Figuras Literarias</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Book_and_pen.jpg" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte225" class="parte2">
+        <p>Son recursos del lenguaje que los autores usan para embellecer o dar expresividad a sus textos. Entre las más comunes están la metáfora (comparar sin usar “como”), la hipérbole (exageración), la anáfora (repetición al inicio de frases) y la personificación (atribuir cualidades humanas a objetos o animales). Su uso hace que los textos sean más artísticos y emotivos.</p>
+        <p>Notas: Usadas principalmente en poesía y literatura narrativa.</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas25">
+        <button id="cerrar" onclick="cerrar_tarjetas(25)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(25)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario25" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="25">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(25)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="26" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte126" class="parte1">
+        <h2>Tipos de Narrador</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Storytelling_illustration.jpg" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte226" class="parte2">
+        <p>El narrador es quien cuenta la historia en una obra literaria. Puede ser protagonista (cuenta en primera persona), testigo (observa los hechos) o omnisciente (conoce todo lo que ocurre y lo que piensan los personajes). El tipo de narrador influye en la perspectiva y la comprensión del lector.</p>
+        <p>Notas: El narrador omnisciente es el más común en novelas clásicas.</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas26">
+        <button id="cerrar" onclick="cerrar_tarjetas(26)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(26)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario26" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="26">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(26)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="27" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte127" class="parte1">
+        <h2>El Realismo Literario</h2>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Reading_books_illustration.png" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte227" class="parte2">
+        <p>Movimiento literario del siglo XIX que buscaba representar la realidad de forma objetiva y detallada. Los autores realistas se interesaban por los problemas sociales, la vida cotidiana y los personajes comunes. Se oponía al Romanticismo, que se centraba en los sentimientos y la imaginación.</p>
+        <p>Notas: Grandes autores: Gustave Flaubert y Benito Pérez Galdós.</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas27">
+        <button id="cerrar" onclick="cerrar_tarjetas(27)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(27)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario27" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="27">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(27)">Cerrar comentario</button>
+    </div>
+</div>
+<div id="40" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte140" class="parte1">
+        <h2>targeta de prueba</h2>
+        <img id="imagen" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhMVFhUVFxcWGBUWFRcXFxcYFRcYFxgWFRgYHSggGBolHRcYITEhJSktLi4uFyAzODMsNygtLisBCgoKDQ0ODg0NDysZFRkrKysrKzcrLSstKysrLSs3KysrKystLSstKysrKysrKysrKy0rKysrKysrKysrKysrK//AABEIAKgBLQMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAACBQEGB//EAD4QAAEDAgQDBQcCBQMDBQAAAAEAAhEDIQQSMUFRYXEFEyKBkQYyQqGxwfBS0RQjcuHxB2KSM0OiFlOCstL/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwD5cArgKAK4C6MoArtCjQiNCCAIgCs2l4c0jWIkZtJnLrHNWa1BwNRGtRsLVLDLYkhzfE1rhDgWmzgRMHXZRjPziiqtarhqsGpvAYl1J4eyMwmJaHC4LTY20JUoVa1XDVdrUahQc9waxpc46NaCSegFyoA5VcNXrezPYSs/xVnNot4e8/0BgeZnkvQ4X2awdCC5pqEb1DI/4C3qEHzfDYV9QxTY554NaXR1jRbmD9jMW/VjWD/e8D5Nk+oXvW9pNbAY0NA05dANFD2s2fiPyHolV5al7BHV+IaP6GF3oSQnKXsNh4/61UnkGj7GF6Hvw+4yna/3lcaGgaAnpAlSjCHsPhv11f8Akyf/AKKf+hsMdH1vVn/4WtjMQ0CSB8/3QGdoARli35xVGW/2DpfDXeOrGn6EJPEewFT/ALdam7k4OYflmXqG4466rSwmKa4C5B5hSj5fjPZPF09aRcONMh/oB4vksatRc05XtLTwcC0+huvt1RwG4PmlsUxjxlqNa9vBzQ4eUi3krR8VLVUtX0vH+xmHqSaRNI8vEz/i4yPIrynavsniaMnJ3jB8VPxW5t94ekc1ajzhaqFqYIQ3NVQsWobmplzUNzUCzwhuCZLUJzUC7ghuCO4IbggCQqEIrgqEKgRVYRCFQoCgIjQuNCI0KDrQiNCjQitaiuNCK1qjWojWqURrURrV1rURrUHGtRGtTvZPZVXEP7uk3MdSdGtHFx2C+lez/szSwsOtUq/rIs3+gbddeig8v2D7EVKkPrzSZrl/7jvI+5535L3PZ/Z9HDty0abWg6n4nf1ONymH1eCDVrCOaihY2sI1PTT1KyMS8m5+w+ierOaR4j0/DaVnvpnYyOv2KBV5VM0rTw3ZpJ5H08jCPTwTW3OWP6p+mvkqF8DRIuT5SmX1A3X7IVXFNbb6T/lZeJxJc7cDl+aoKY/Hl1hIH19NEs0mJlHr0xtM+qXdExB87ID06x2R6OMif7/hSobyHzVp/Cfsg2KePmLpqniHbXHKPpssWhSdwAGmh1vZaOCqACQbjkbINPD1gSJAA6x9U8G8D+cliPM3EX4K+Equ4yOEzyUF+1/ZfD4iS5mV5/7jLGf9w0d53Xz3t/2WrYaXEZ6X/uN0H9Y+H6c19SoVCNkxmnhfzB5FWj4O8cv78z+bILmr6Z7TexDXTUwwDHamlo0/07MPLTovneIoua4tc0tc0wWkQQeBCuahNwQnBMuCE4KoWcEJwTLghOCBdwQ3BHcENwQAIXCEV2mnneenD/KEQqGGhFaFxoRWhRXWhFaFxoRWhQRrUVrVGtRWBQRrVtezvs/UxT4b4WNPjqEWbyHF3L1hW9mOwH4qpA8NNsF7+AOgH+4/LVfVMLh20KbaVJsNbYAfNxO5PHdBTs/s6lhqYpUhA3O7j+px3PyRgJ0/yquqpetW5/3UUWq8f4KA5xdaPTfrzQHE7+nyVtAAB57eXNAHEvPTj05+aC57pHiGu8n0i0otR02P1H5CAQwSRAkajpHpyVDbawaJN+AMeUeaQrV5kn8/sle0a36SeQH5dZWIxD3blvQwgJ2liCXADQQYHHXXp9Vz+MBH6edz6rOcI5qxdxQOMrnjp6I1PEB1jfS0m/oPv6pOkQYFvomcHh5daLbTEhBpfwbZ18iboz6EkACBpe/zRJsLmOGx26otJ4m8QOnzQSjhon9OvxSItsihrQIaSBvII+vTZR9WRuNbxY9D6pCtWM66TfqgffJP8uLai0cdBcaDVS+/p+yUfi3RseRE+irRxLnGIA5jTzQa9OpG1+qfw9fiTpfeFkNc4a6bdOaMXmN45E/XbyUG1nBGoI24hYftH7N08U3xeGoBDagFxwDh8Tf3smaFc7HqnadWYB1OnPkg+Jdqdm1KFQ06rYcPQjZzTuEg4L7X272NTxVPJUEESWvHvMPEcRxGh9F8i7X7NqYeo6lUEOG+zgdHNO4K1mozHBBcEy4IRbKqFnBdwuGdUe2mxrnOe4NDWiXEnYDcq9RsWQXhAKswBxAmASBIgwDuNjyQnIrghkKqbaEVoVGhGaFkXaERoVWhGaFBZoT/AGT2c/EVW0qYlzvQAaudwA/NUk0L657FdgjDUczx/NqAF/Fo2pjpvz6BBp9mdm08PSbSpjwjUnVzt3Hmf2ClV1+SZqut+eaVqFogTe5iw48fyyig1XaSYExsJnQdUq4kanj0jlf+6NUqX/N+iVrYmLA736cEBc+2/wCXtZD706R056+pSXfX4cwjtrQJuZ3ufKwQHcfCSIneTzvaDtsk8TB4xvNv8+SFiMflIHnIFh8/33SlfHyZm/EkW89fl5Kjldt4aRp687ckjiCOS6e0JsbciZ31EiRt+XSVUk9B+bIKFpuYXWngusftZcqgBARqaw+ILR4dOn32/OCz2STqjt9UG6ztMOEOgRwAvzPFFbVBMzvrf7rDpmTtbinKTYg/Tb7INNuWcwDZNi74oHPUjqqtwsgnSYhCotk2KaphzXSGS02nNDjvYEX3tPFAr3UWRaVKTJ0Hr5LS/gpvCgoZTfXa0qCtF06CJHInfVWsDMRNrjWBNovP7FW/h592YHl9ALdeS615Gn7abToL/dAVhm5tAs2B0njuisdvt+cUo+mRqGkHcA6Tp89QiU3/ANXKGnr0QaDXzYG44/4v6rL9pOwWYunkMNqNk038D+k/7Tv5HZO0iRYEafEJIPGBHPgmQD8Q8/t+f5D4TjMK6m91Oo0te0kEHYhKuC+q+33s/wB/T/iKQmowHMALvYL6a5m6jiJHBfLHLWaijGOu8CzYkkAgTIEgyD5oOJqBxsxrRAECdQACZcSZJE67opMTz+e9+UoDlpAHBCIR3BCIUDjUVqE1GasqI1FahtR6TC4hrRJJAAGpJMADzQew/wBOuw++rGs8fy6JEToahuP+Iv1yr6bUbbp+X+aV7D7LGGwzKA1aJcY1e67nepgcgE08EDy0FohRS9R0Qs6vV8QGUkne0DhO6ZrvHX7b/slKp5+WyANQ6/sk6rZl3pbhbe6O9wBHHTn5ffZL1HRawHAIA5o4DrfbXZDxtYAHK5xLtZcSI4QdLzYfSyDWBnkl3MJVC7iSd/UrhpDdEezp0S9XqgtVpzJnRLtJcco15m3z0Vs3qqU6cunUb/ugETBj8+S42peTsrV8OQZA8PE/TmgkHhyQOOe08idOcX81GPI/AhUKpggTG94Fvz5JihhyTpccp9RwQPdlXdNz/e1+S18SMwAjlHPkIv8ALqszCMc2SYaBcunSPXb681sYHENIztc0gjcRAB3zX124oBUqMQIPLgn21C0CTlvbMBz469EtWxL2NzhoG7s7srWbk5i2CI3gDohU8S5zrEOJF2tyCeD7S5xgQPEBY2QaAp5bh7SSZ1JE3OYQTkdHK/DSBTULpc1pg6RLxwOab7nQfK4W4gZr2sbb2tJG3RRmJ3LshiTnOUt4++LDTdQNZ7tnK0Xsbkx+mDaLHQ6phzwBMiJibAT+mdJ5LDrYhgIJknUTDtzcZS4zM3iwnS6LRxWdwOYQAbtfYmdDAuBE679CgcrVY0AknQuDTEG+l9Pr0VhkkvNiBBzC8C4vMbnpOyo+tluRlFyRAl3CI122vIVSbDKXON2ukDM0GCQckCRYSNdQTqQ0Kbp0P0+QJI1tdMYavcyQLw4aCYB+/wCQs+iSAcz502m5IFwNPsJJsmaZJLYdG+g0ta+n+eqDSDtY2J/Oa+S+3/YP8PW7xjYpVpIGzX6uZ9xyJ4L6lSFuO4B0B2v1Ezrqlu3+yhisM+i6A4+JhmzXt93yk5ejuauaPhTghvYYmDBkA7GImPUeqPWplpLXCC0kEHUEGCD5oDgtMgOQijOQigZajNQGlFYsqO1e1/0w7MFTEmu/3MOAROneP8LPS56wvENK+z+wGA7nA0ybOq/zjGviIyf+IbbmU0eheZgg3DjN7Akf+WsJTF4ixHDfopXxGU3IDYiZnWLfQeazcdVHGSdSPX0/N1FAq1p1QC7eQfzRDc9C7wWExy4/dUSYGptNy4k3m0k89NB5BLm6u+tMGDwtoOUn9kCo8bWH26oOV6tomw02/us6piCN0LE4iXfn2S1SrsgZdWPCVTvxuPmkzWKo6sqHTWH4FbCwXidOUb2k5iBAmePI6LOD001+URuRcEiSDdvONLGJ9EDr2gktN7WPPjaBCoabYsC4aE/KD+kfv5rPNQ3jQXkXBVqGJiAC6Z2MRzcdhrfeN1Bq9zFtOUEfnVdL45f8ef6jzPqlaNe2VseQhsnoepn/ACmMPWDqhZmaXAAu8L22PxBxGUjoTxsEDrHWlpnSI01EmWyPpoQpX7RLfCfedA918Raw7sgtN/fHhCUovpub3lNzXNFs7Hh4JmLOF9wI6DcSKpXj4hH6XGzvN1/Kd9EGlTqNyjNGoIBfJnqTJNpm515Jod2WOaRrFgLE6iQLuNvlOixmVXnxAtkTpaOIOW/DUTyCqcSbRYxFyDY6kyZ2mTM2BQaLu0KbXCm1zDUMeAENOhJtNyACYv7pVaWKkwWuHitax1uMunOQALJZ1Ux4TAiTa9t2mbaa3I8guPfLSC0G2rZIuJsBvztpOyBtz3k+AubFiAGuaSeMguDbbRv/AFC9HEupnxljjMBzQ1sngSXRYXtsDbjltxJphrGsJIh01KrwwNBgh2JeCC/cB0Wi+i0DjZ8RzxcAkNOsTdpO2UwfFYWhA+1waC4eHhkIGY/pyvdlJ1N7iyu3GF1y1gbLm6NcQWkgkuDnBgk3DgIGsXCxe8M5mOJBsMzXGI1lzpEGdJzG0QmqvajKTcr84nK0PMlpOkF4ki8Auj90Gzhq5MASZBBdABh1oaW7zFrG2iepDeNdZEE8zfWyy8PiSdS7Xk4OAsGiQYGmmW4Aur1CKcvHhbbMWASIlxLyJtlM3nc8VBqUnhxbDiIdIiRrEio3SIPxbXtqnqWbc5pvED3Z5C5AgDy6rHp1IiSHNceRmRmtYzxtH0CcZiAHGRYy4m0NAFg4yJBmeoN7WD53/qd2T3WJFcDwYgF2kDvGwH+sh3mV4py+0+33Zpr4Go6PFS/mt/8AgJPTwF4jiZXxVy1iBOQyiOQiqgzSiNKA0ojSsqf7Pw/e1adIW7x7WTwzODZ8plfeaVRjRDIaAcoFpsIaPQAxtHJfHf8AT6gH41jjpSY+qdPhblGvNwPkvqWIryXASIMXAvN5ne7pI59E1V8Tih8R96+UHaYItc6gHjos3HV7cuf5fRAxeLEl0usDIJtAuTcxsCCeSysZ2jq3eJI1AnS/PboVAz/E6E25fbqkO/qtH81zA53iDWkyOua7iD8UCb2ELOr4mfMQk62IO7jPFznOmBABkzAvbQawqNR9am5/eBzzUALT4z3bRE6NMAmQbi0g7BXp1swzD3YPDNNvDAOokGL6jiFivrOIEOkggjOA+BOgB5SAdplZWP7QLSC6lTqNDhv4nT7ro/WHOsfkEG7iWuadLnhfTWIG1/RIvqTdIHtotaHBuXvNmtOWmNZyk+PSOgHEgjr9pgEA5iXE3aGwIknNMdQd4PElVGmaqGagSH8UOR5SNN4E3gSY35J+jWzWdRykCczg62/iAECAL8FQem0RLnsbwDiRPnEfP0sgNrkne5sQ2CQTN9yZuTxStdzc0ktEWkWgiCZIJh1xpyQKmOBEBsA28RBBtfKNxE3i9tIQbFbFACARsIy3EakuzGZ0jKIg67oOxwmG3Pprxt+dSFgOx43ufl6ITcQZ8MffysZ1sLIPY0cURfW/H6T9LJqjiSfdNSJ0L3QNjDfdaTvGl7ry7MdliWkGwgi56ceMolfHBzbPc06EAkEcdD4TEwQfUSFIPTPxNQQ5zCCRIYTOVo8MudMEX1kATyU/izEnwAauzNEdCdRztzOw8mzFhvutZqHPzBz3ugRLDms7/dre5sjN7Sa50ZctrOlzddWCC1zRa8Ok9JSD0lLtSiTZ9wJsPeEi7Rqb6aybC5CLXxHIGbiCbDiQb+UWPAhedq4jvNBLhduxnkdROlhuLFI4rtCtDWNc9gjVz9xrmdMFwI95IPUtc4xJ1vrI4aA3jra26I/G2HhzGbzlnz8RJuB0ibwvM0O0nAO750uEEVImXEWDjlMmBuDIHmDjHSJFRw0GYtpOaAL5vFlbfrNrN2SD0NOsSZbZ1zL2tJndxjlsiYPtIHMMpBALXGqBTcWsNnw4EmmC+ZiBmI1K883tFrjcty8Q9pvsMsyZE3EcIBsDtYCwPpupuLPddUcHQdmuJdYXIiYuQNUg3241rm5w6mRqKgAyG/ittvvYzMwjYXFAElzIkBoBewAZrWcXfyxDZiwMj4hAxKnaPdMNWowNmDFM+8+QJzz4rx4tgBF7m+G7RFUCozMS6QQZc6ZEgnUnSLXtpdFejpYmCYsIEBpBgDQMJgRo3QWnS0dpYTLlrUWkZvfaXSyqScwz+8A9rzIi4Jk7rFw+MJlrqb2gARMjNINmEkSYEmw1FrhLYHtOu8961hZRILZD2trEulzS3I0ASBfPzOYaqD09TFtDsvdGHBrJcYBpuJc9jXMDtGicpAEnKDJts4bFgESXOuB4oJDTGUHLEOjxXJIBM6ifJU8U9jS7uXuiSGsaQ4kkTLiGtMtDZDiYiRcCdCh2i0M7xxaxo8Wap4IkAtDwYgyYjj6oPY4XE5nRmafCAWCwuRNz73xWtw2XxHtrB9zXq0tmPc0f0g+H5Qvp+CxOYf8AU94XcJa9pLDLmgmx8EgRb1nxf+pNEDF94I/mNBdBkZ2+Fw6xl9UxNeTcqtqEaEjoYUcUMlaR1pV2uQAVcORXuv8ATU5XYioSA1rGtJMwJdnJJGgHdyT0Xqq2NJEA6CxJs7M7wm0GCPh4AaSvBezdcDD1Q73XudLSYDgxjTkcdIcXBkEx4zNrh7tn2gDWv7sue4ExBcJcCA65vlzS2BrcAQsqex/aTspAGcm0ANJdN4HeS2/EkwD0jHrdqgmxJBJN3SL3i/0nhwEYHa/bZByssYEkkuza+8TcyABrofM5hx7pJFgdrHW5vF7xeJt1ViPTv7Qm5gG9gCB0E/XdUfX4mJ5geX09QvKCu4kTe+hmLHeLlFrY1sNGU5hHxeG2wawDKIPG8c1Rr1O0Qdi4DYWJjUDhabkf3Qr9qfCQAJ8TS2TIMySRMze3NIuxUC1yZB1aORGUjxW15eitTMTLtTrYD5CwQadPtLxQBrHDjYIlTFQYBbfcGw46fbVZDRBV6ZBJPyQGxOKzGCJjQi7T5EWtPPogUq7oAmGkiSAC4eIElp1zW1kdVHNVHCxQagxVItc7MWumADJcQBqS1tyZPxCZMninisa8WLgc36XNO+hyW2mP3SJaqBqBmkm2OhKtZKKUD1TEtLcsOP6czgco3aBl0mUCrAPvzwiYA4EkC+mlkMlcMILAlFp14GpBGhmw8gJQ6bgqlA0/tB+US4kk3GgIGgPH81kq+G7QNNpbla9jiCWmcs8gbA6XibapAOVibIGqmKzQ0DKwGYc4vMkzZxGYDaPWVKWJbN2y06t4jmd/3g8kkCrtQN1cQ2fC2BqDfwk3lokxt9oRHVHVoGa9MEy4Wj4iAxlgOB53SLmrlN5GhIgg2tcaHqqNPCYruyajHF1Vwy5CzM08S6/jEAjKRvBEavO7fE5SxrQQGl9ABmVh1bSAu2ASdTLp42wMxmZMzM9dVVpvKg9G97Khax1U1xTB7slzmuJkPcMpaT4gDfSwmLkP18QwOzMDDXcBFNwLXhti9tQ6BuUG8kQJkALxxqkAgWmxi0/l/VEZiXBmQBkRaabCRuSHZZEpB6allNTNRrPZiIAZSa0ZHhkuaBo0tNv5RAzGdytIdsOqhrH085qlxeHMAY1uQ1DTc0RkEAwbxluDovFUwHi5AI1zCxaduZm3nyR3dqPbLW5mt/TnMkZg4teRGYFwmbGd0g+g4LtBzf5rjWccwBDO9DWkuFOGNMuewZZdFpaYEap+3VQPZSeLXcMh1Ad00Hh059V5bB49ubvHuIeYGRocyzTmbD2QTPugGZgSdCNWue9whqEPLg2k8uN2+F3dEN4E5y4i0+9s5SDBJVHFQlDJVRUOVwUAFWzIN/Bdpd1h8oN3vMk3DYAh0RJ00Gvksk9quY5xblc4yC57GuzXMOgix0M6zclcqVT3TRtJ+39/VZ1dyKE50wIFiTIF9rE76K2ZUpi6gJzHhFuqCVHmbbKjQuwuAoizgoXXXJXGuugu4qUWwV0BWKArylqjVdtQGy6SgXOi7Sp7qVHQrUzKAhEKzn8VzKYQqjkBw5dBSzH3R2hBYOXCVFxBbmrgKi7ntCCHkuNdCgurZOCK7mlSFZQBBxq5kViVxyoo5i6BZXK4QgpCtnI06cVyF0lEWp1HBwduIi06aWPQLcp9s1KjaveOLnPZD3Td8BuQutq3LE75vXBACbwmjv6T8hKiuFyoSuEqsqoGCrShSuyoG5mn0J+YCSraFN4a7XDofqlKqKCwXCJXcJjzVGj1+67VaNeRQUeRK5C4q5kR0hcXZXJQFouspUqbBVY208FQhBBb7Jh7hEoI5qxFo5oBvAJVqUhWhULSgJ3kqgcZQsyK0oC02QitEKhNrIhkoOPXGrsrjncIQdkqwQG1d4Rm8UEa1QOULrKBw1QElQtUyojdEVSFCrQogqFDZWUcqBuKqFcqoCCJmno7olyjEw0+X1CAUrkqsqOaREgiRIkESNJHESCJ5FECldlRRQM4B3iI4gj7oVcXUURQh81HCbKKIFJXZUUQdlSJUURHROy4FFEFgisXVEEy8VwrqiAUDRQhRRB1h4JipVCiiKXqPUNWyiiIjn2sqsqEDkoogt3oI5qNffVRRUN0zZFUUUV0qtyooggUhRRBVWUUVHIVsQYaBxP0UUQLSuKKIj//2Q==" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte240" class="parte2">
+        <p>probando funciones</p>
+        <p>Notas: probando</p>            
+    </div>
+
+    <!-- BOTONES PARA ESTUDIANTES -->
+    <div id="botones_tarjetas40">
+        <button id="cerrar" onclick="cerrar_tarjetas(40)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(40)">Comentar</button>
+    </div>
+
+    <!-- FORMULARIO COMENTARIO -->
+    <div id="comentario40" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="id" value="40">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(40)">Cerrar comentario</button>
+    </div>
+</div>          </div>
+          </div>
+        </section>
+</body>
+<script src="../FUNCIONES/mostrar.js"></script>
+
+</html>

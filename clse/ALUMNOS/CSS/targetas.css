@@ -1,5 +1,22 @@
 
-.CN, .M, .CS, .LL, .materias button, .mostrar_materias {
+.CN, .M, .CS, .LL, .mostrar_materias {
+    text-align: center;
+  background-color: #1249489c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: 100vw;
+    height: 100px;
+    font-size: 5vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    border: 3px solid  #fffaffff; 
+}
+.materias button{
+    text-align: center;
     background-color: #1249489c;
     color: white;
     border: none;
@@ -7,24 +24,30 @@
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
-    font-size: 16px;
+    width: 100vw;
+    height: 100px;
+    font-size: 5vh;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-    border: 3px solid  #fffaffff;     
+    border: 3px solid  #fffaffff;  
 }
 .mostrar_materias{
-    background-color: #1249489c;
+     background-color: #1249489c;
     color: white;
     border: none;
+    border-radius: 12px;
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
-    font-size: 16px;
+    width: 100vw;
+    height: 100px;
+    font-size: 5vh;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-    border: 3px solid  #fffaffff;     
+    border: 3px solid  #fffaffff; 
 }
 .botones_materia{
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -60,7 +83,7 @@
    
 }
 .tarjeta button{
-    width: 100vw;
+    width: 40vw;
     background-color: #1249489c;
     color: white;
     border: none;
@@ -73,7 +96,7 @@
     transition: background-color 0.3s ease;
         border: 3px solid  #fffaffff;
 }
-#parte1, #parte2{
+.parte1, .parte2{
     background-color: #1249489c;
     width: 44%;
     color: whitesmoke;
@@ -101,7 +124,7 @@
         align-self: center;
         
     }
-    #imagen, #parte1 h2{
+    #imagen, .parte1 h2{
         width: 40vw;
         height: fit-content;
     }
