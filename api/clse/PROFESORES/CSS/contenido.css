@@ -1,0 +1,14 @@
+.contenido {
+    margin-top: 15vh; /* Ajusta según la altura real del header */
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.654);
+    width: 100%;
+    min-height: 85vh; /* asegura que cubra la pantalla sin forzar el estiramiento */
+    color: whitesmoke;
+    text-shadow: #124948 1px 1px 2px;
+    z-index: -2;
+    padding: 10px;
+    box-sizing: border-box; /* asegura que el padding no sobrescriba el ancho */
+}
+

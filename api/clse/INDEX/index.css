@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
+
+body::before {
+    content: "";
+    position: fixed;
+    background-image: url("../img/fondo-index.webp");
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;        
+    height: 100vh;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+html, body {
+    overflow-x: hidden;   
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: monospace;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+form {
+    font-size: 170%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    width: 350px;
+    height: 350px;
+    color: whitesmoke;
+    text-shadow: #124948 1px 1px 2px;
+    background: linear-gradient(-45deg, rgba(23, 166, 93, 1) 30%, rgba(177, 231, 114, 1) 70%);
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#check {
+    margin-top: 10%;
+    background-color: #30bebc;
+    border-bottom: 2px solid #b1e772;
+    padding: 10px;
+    text-shadow: -2px 2px 0px #30bebc;
+}
+
+#check:hover {
+    color: rgb(174, 231, 243);
+    background-color: #124948;
+}
+
+input {
+    font-size: 85%;
+    text-transform: uppercase;
+    color: #124948;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background-color: #d9eec1;
+}
+
+input::placeholder {
+    color: #17a65d;
+}
+
+header {
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 220%;
+    background-color: #1249489c;
+    text-shadow: #000000 1px 1px 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid #b1e772;
+}
+
+div {
+    height: 70vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    form {
+        font-size: 140%;
+        width: 250px;
+        height: 250px;
+    }
+
+    header {
+        font-size: 170%;
+    }
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ffffff, #30bebc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        2px 2px 0px #b1e772,
+        -2px -2px 0px #124948,
+        2px -2px 0px #17a65d,
+        -2px 2px 0px #30bebc;
+}

@@ -1,0 +1,140 @@
+
+.CN, .M, .CS, .LL, .mostrar_materias {
+    text-align: center;
+  background-color: #1249489c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: 100vw;
+    height: 100px;
+    font-size: 4vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    border: 3px solid  #fffaffff; 
+}
+.materias button{
+    text-align: center;
+    background-color: #1249489c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: 100vw;
+    height: 100px;
+    font-size: 5vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    border: 3px solid  #fffaffff;  
+}
+.mostrar_materias{
+     background-color: #1249489c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: 100vw;
+    height: 100px;
+    font-size: 5vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    border: 3px solid  #fffaffff; 
+}
+.botones_materia{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.CN:hover, .M:hover, .CS:hover, .LL:hover, .materias button:hover, .mostrar_materias:hover {
+    background-color: #0e3635;
+}
+.materias{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#botones{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.tarjeta{
+    width: 90vw;
+    font-size: 120%;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+.tarjeta button{
+    width: 40vw;
+    background-color: #1249489c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+        border: 3px solid  #fffaffff;
+}
+.parte1, .parte2{
+    background-color: #1249489c;
+    width: 44%;
+    color: whitesmoke;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1%;
+    border: 3px solid whitesmoke;
+    margin: 1%;
+    border-radius: 5px;
+}
+
+.tarjeta button:hover{
+    background-color: #0e3635;
+}
+#imagen{
+    max-width:  25vw;
+    border-radius: 5px;
+}
+@media (max-width: 800px) {
+    #tarjeta{
+        flex-direction: column;
+        align-self: center;
+        
+    }
+    #imagen, .parte1 h2{
+        width: 40vw;
+        height: fit-content;
+    }
+    
+    #parte1, #parte2{
+        width: 80vw;
+    }
+    #parte1{
+        flex-wrap: wrap;
+    }
+
+}
+
