@@ -29,6 +29,7 @@
         <a id="boton" href="./tarjetas.php">Tarjetas</a>
         <a id="boton" href="./crear.php">Crear</a>
         <a id="out" href="../../INDEX/"><img id="salir" src="../../img/logout.jpg" alt=""></a>
+        </div>
 </header>
 
 
@@ -85,17 +86,19 @@
 
             <div id="tarjetas">
             <?php
-             $sql = "SELECT * FROM flashcards" ;
+            $sql = "SELECT * FROM flashcards" ;
     $resultado = mysqli_query($conexion, $sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
-           echo '
+echo '
 <div id="'.$fila['id'].'" class="tarjeta" style="display:none;"> 
 
+    <!-- PARTE 1 -->
     <div id="parte1'.$fila['id'].'" class="parte1">
         <h2>'.$fila['titulo'].'</h2>
         <img id="imagen" src="'.$fila['imgURL'].'" alt="">          
     </div>
 
+    <!-- PARTE 2 -->
     <div id="parte2'.$fila['id'].'" class="parte2">
         <p>'.$fila['contenido'].'</p>
         <p>Notas: '.$fila['notas'].'</p>            
@@ -106,23 +109,26 @@
         <button id="comentar" class="comentar" onclick="comentar_tarjeta('.$fila['id'].')">Comentar</button>
     </div>
 
-    <div id="comentario'.$fila['id'].'" class="formulario-comentario" style="display:none;">
+  <div id="comentario'.$fila['id'].'" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="'.$fila['id'].'">
+            <input type="hidden" name="tarjeta" value="'.$fila['titulo'].'">
+            <input type="hidden" name="creador" value="'.$fila['autor'].'">
             <input type="hidden" name="rol" value="'.$_SESSION['rol'].'">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario('.$fila['id'].')">Cerrar comentario</button>
     </div>
-</div>';
+    </div>';
 
           };
           ?>
           </div>
           </div>
         </section>
+
+
 </body>
 <script src="../FUNCIONES/mostrar.js"></script>
 

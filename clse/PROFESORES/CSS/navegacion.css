@@ -72,6 +72,8 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(5px);
     border-bottom: 2px solid #FFD6C2; /* borde claro cálido */
+        z-index: +2;
+
 }
 
 #boton {

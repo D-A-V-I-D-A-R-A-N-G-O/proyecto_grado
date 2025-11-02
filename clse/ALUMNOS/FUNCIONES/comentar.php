@@ -3,18 +3,12 @@ include("connect.php");
 session_start();
 
 if (isset($_POST['comentar'])) {
-    $rol = $_SESSION['rol'];
-    $id = mysqli_real_escape_string($conexion, $_POST["id"]);
+    $tarjeta = mysqli_real_escape_string($conexion, $_POST["tarjeta"]);
     $comentario = mysqli_real_escape_string($conexion, $_POST["comentario"]);
+    $creador = mysqli_real_escape_string($conexion, $_POST["creador"]);
     $usuario = $_SESSION['name']; 
 
-    $sql = "UPDATE flashcards 
-            SET comentarios = CONCAT(
-                COALESCE(comentarios, ''), 
-                '\n', 
-                '$comentario — comentado por $usuario'
-            )
-            WHERE id = $id";
+    $sql = "INSERT INTO `comentarios` ( `comentario`, `comentador`, `tarjeta`, `autor_tarjeta`) VALUES ( '$comentario', '$usuario', '$tarjeta', '$creador');";
 
     $resultado = mysqli_query($conexion, $sql);
 

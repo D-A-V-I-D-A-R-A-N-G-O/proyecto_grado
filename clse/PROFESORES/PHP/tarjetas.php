@@ -135,7 +135,8 @@ echo '
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="'.$fila['id'].'">
+            <input type="hidden" name="tarjeta" value="'.$fila['titulo'].'">
+            <input type="hidden" name="creador" value="'.$fila['autor'].'">
             <input type="hidden" name="rol" value="'.$_SESSION['rol'].'">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
