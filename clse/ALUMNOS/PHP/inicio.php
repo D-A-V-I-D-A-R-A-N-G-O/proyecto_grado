@@ -15,8 +15,8 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
     <title>inicio</title>
     <link rel="stylesheet" href="../CSS/navegacion.css">
     <link rel="stylesheet" href="../CSS/contenido.css">
-    <link rel="stylesheet" href="../CSS/inicio.css">
     <link rel="shortcut icon" href="../../img/F. C (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/inicio.css">
 </head>
 <body>
 <header id="cabeza">
@@ -30,10 +30,10 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
         <a id="out" href="../../INDEX/"><img id="salir" src="../../img/logout.jpg" alt=""></a>
 </header>
 <section class="contenido">   
-    <?php  echo '<h2>Hola '.$_SESSION['name'].', bienvenido a FlashCards</h2>'?>
+   
     <div class="intro-card" role="region" aria-label="Introducción al proyecto">
-  <h2>Bienvenido</h2>
-  <p>
+   <?php  echo '<h3>Hola '.$_SESSION['name'].', bienvenido a FlashCards</h3>'?>
+    <p>
     En esta página podrás encontrar material de estudio para tus principales clases,
     como ciencias naturales, matemáticas, español y sociales.
     También podrás crear tus propias tarjetas para almacenar tu conocimiento y compartirlo con tus profesores.
@@ -49,7 +49,8 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
 </div>
 
 <h2>¿Qué piensan sobre tí?</h2>
-<?php 
+<div id="comentarios">
+  <?php 
         $sql = "SELECT * FROM comentarios WHERE autor_tarjeta = '{$_SESSION['name']}'";
     $resultado = mysqli_query($conexion, $sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
@@ -57,13 +58,15 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'ALUMNO') {
      <div class="comentario">
      <h3>En: '.$fila['tarjeta'].'</h3>
     <p>'.$fila['comentario'].'</p>
-    <p>Por:'.$fila['comentador'].'</p>
+    <p>Por: '.$fila['comentador'].'</p>
     
 </div>
     ';
 
 };
 ?>
+</div>
+
 
 </section>
    
