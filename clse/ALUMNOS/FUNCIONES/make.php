@@ -15,7 +15,7 @@ if (isset($_POST['crear'])) {
     $_sql = "INSERT INTO `flashcards` (`id`, `titulo`, `contenido`, `imgURL`, `notas`, `autor`, `tipo`) VALUES (NULL, '$titulo', '$contenido', '$imgURL', '$notas', '$autor', '$tipo');";
     $resultado = mysqli_query($conexion, $_sql); 
     if ($resultado) {
-        if ($rol === 'DOCENTE') {
+        if ($rol === 'ALUMNO') {
             echo "<script>
             alert('Tarjeta creada con éxito');
             window.location = '../PHP/tarjetas.php';

@@ -1,140 +1,190 @@
+.CN, .M, .CS, .LL, .materias button, .mostrar_materias {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;    
+    background-color: #1E5D5E; /* azul verdoso oscuro */
+    color: #EFFFFA;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: 250px;
+    height: 100px;
+    font-size: 150%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+    border: 3px solid #B4FFF1; 
+}
 
-.CN, .M, .CS, .LL, .mostrar_materias {
-    text-align: center;
-  background-color: #1249489c;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    width: 100vw;
-    height: 100px;
-    font-size: 4vh;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    border: 3px solid  #fffaffff; 
-}
-.materias button{
-    text-align: center;
-    background-color: #1249489c;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    width: 100vw;
-    height: 100px;
-    font-size: 5vh;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    border: 3px solid  #fffaffff;  
-}
-.mostrar_materias{
-     background-color: #1249489c;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    width: 100vw;
-    height: 100px;
-    font-size: 5vh;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    border: 3px solid  #fffaffff; 
-}
-.botones_materia{
-    text-align: center;
+.botones_materia {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
+
 .CN:hover, .M:hover, .CS:hover, .LL:hover, .materias button:hover, .mostrar_materias:hover {
-    background-color: #0e3635;
+    background-color: #3AC9A3; /* verde-azulado más brillante */
 }
-.materias{
+
+.materias {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-#botones{
+
+#botones {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-#tarjetas{
+
+#tarjetas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
-.tarjeta{
+
+.tarjeta {
     width: 90vw;
     font-size: 120%;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(230, 255, 250, 0.9); /* fondo claro frío */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
 }
-.tarjeta button{
-    width: 40vw;
-    background-color: #1249489c;
-    color: white;
+
+#cerrar, #eliminar, #editar, .comentar {
+    width: 20vw;
+    background-color: #1E5D5E;
+    color: #EFFFFA;
     border: none;
     border-radius: 12px;
     padding: 10px 20px;
-    margin: 10px;
     cursor: pointer;
     font-size: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-        border: 3px solid  #fffaffff;
+    border: 3px solid #B4FFF1;
 }
-.parte1, .parte2{
-    background-color: #1249489c;
+
+.parte1, .parte2, .formulario {
+    background-color: #1E5D5E;
     width: 44%;
-    color: whitesmoke;
+    color: #EFFFFA;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
     padding: 1%;
-    border: 3px solid whitesmoke;
+    border: 3px solid #B4FFF1;
     margin: 1%;
     border-radius: 5px;
 }
 
-.tarjeta button:hover{
-    background-color: #0e3635;
+.tarjeta button:hover {
+    background-color: #3AC9A3;
 }
-#imagen{
-    max-width:  25vw;
+
+#imagen {
+    max-width: 25vw;
     border-radius: 5px;
 }
+
 @media (max-width: 800px) {
-    #tarjeta{
+    #tarjeta {
         flex-direction: column;
         align-self: center;
-        
     }
-    #imagen, .parte1 h2{
+    #imagen, #parte1 h2 {
         width: 40vw;
         height: fit-content;
     }
-    
-    #parte1, #parte2{
+    .parte1, .parte2, .formulario {
         width: 80vw;
     }
-    #parte1{
+    .parte1 {
         flex-wrap: wrap;
     }
-
 }
 
+.formulario {
+    width: 80vw;
+    background: #1E5D5E;
+    border: 2px solid #B4FFF1;
+    border-radius: 12px;
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+    width: 100%;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    padding: 6px;
+    background-color: #EFFFFA;
+    color: #1A1A1A;
+}
+
+.cerrar-form {
+    background-color: #2FA18A; /* verde agua */
+    color: white;
+    border: none;
+    font-size: 70%;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cerrar-form:hover {
+    background-color: #1E5D5E;
+}
+
+#contenido, #notas {
+    height: 20vh;
+    width: 80vw;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 1em;
+    resize: vertical;
+}
+
+.formulario-comentario {
+    font-size: 160%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: center;
+}
+
+.formulario-comentario form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 50vh;
+}
+
+.botonn {
+    background-color: #2FA18A; /* verde principal */
+    color: white;
+    border: none;
+    margin: 2vh;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.botonn:hover {
+    background-color: #3AC9A3; /* verde-azulado brillante */
+}

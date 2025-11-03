@@ -20,6 +20,7 @@
         <a id="boton" href="./tarjetas.php">Tarjetas</a>
         <a id="boton" href="./crear.php">Crear</a>
         <a id="out" href="../../INDEX/"><img id="salir" src="../../img/logout.jpg" alt=""></a>
+        </div>
 </header>
 
 
@@ -34,7 +35,7 @@
               <button onclick="mostrar_botones_tarjetas('LL')">Literatura y Lenguaje</button>
             </div>
             <div class="botones_materia" id="botones_ciencias" style="display: none;">
-                <button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button><button class="CN" onclick="mostrar_tarjetas(16)">FOTO SIN Tesis 👻</button><button class="CN" onclick="mostrar_tarjetas(17)">Sistema Nervioso Humano</button><button class="CN" onclick="mostrar_tarjetas(18)">Ecosistemas</button><button class="CN" onclick="mostrar_tarjetas(40)">targeta de prueba</button>            </div>
+                <button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button><button class="CN" onclick="mostrar_tarjetas(16)">FOTO SIN Tesis 👻</button><button class="CN" onclick="mostrar_tarjetas(17)">Sistema Nervioso Humano</button><button class="CN" onclick="mostrar_tarjetas(18)">Ecosistemas</button><button class="CN" onclick="mostrar_tarjetas(40)">targeta de prueba</button><button class="CN" onclick="mostrar_tarjetas(49)">vfvf</button><button class="CN" onclick="mostrar_tarjetas(50)">YOTOMO TINTO</button><button class="CN" onclick="mostrar_tarjetas(51)">GGR</button>            </div>
             <div class="botones_materia" id="botones_sociales" style="display: none;">
                 <button class="mostrar_materias" onclick="mostrar_botones_materias()">REGRESAR</button><button class="CS" onclick="mostrar_tarjetas(19)">La Revolución Industrial</button><button class="CS" onclick="mostrar_tarjetas(20)">La Independencia de América Latina</button><button class="CS" onclick="mostrar_tarjetas(21)">Globalización</button>            </div>
             <div class="botones_materia" id="botones_literatura" style="display: none;">
@@ -58,24 +59,23 @@
         <p>Notas: El proceso opuesto es la respiración celular.</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas16">
         <button id="cerrar" onclick="cerrar_tarjetas(16)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(16)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario16" class="formulario-comentario" style="display:none;">
+  <div id="comentario16" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="16">
+            <input type="hidden" name="tarjeta" value="FOTO SIN Tesis 👻">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(16)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="17" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -90,24 +90,23 @@
         <p>Notas: Las neuronas son las unidades básicas de transmisión de información.</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas17">
         <button id="cerrar" onclick="cerrar_tarjetas(17)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(17)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario17" class="formulario-comentario" style="display:none;">
+  <div id="comentario17" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="17">
+            <input type="hidden" name="tarjeta" value="Sistema Nervioso Humano">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(17)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="18" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -122,24 +121,23 @@
         <p>Notas: El equilibrio ecológico puede romperse por la contaminación o la deforestación.</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas18">
         <button id="cerrar" onclick="cerrar_tarjetas(18)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(18)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario18" class="formulario-comentario" style="display:none;">
+  <div id="comentario18" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="18">
+            <input type="hidden" name="tarjeta" value="Ecosistemas">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(18)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="19" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -154,24 +152,23 @@
         <p>Notas: Introdujo la máquina de vapor y la producción en masa.</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas19">
         <button id="cerrar" onclick="cerrar_tarjetas(19)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(19)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario19" class="formulario-comentario" style="display:none;">
+  <div id="comentario19" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="19">
+            <input type="hidden" name="tarjeta" value="La Revolución Industrial">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(19)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="20" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -186,24 +183,23 @@
         <p>Notas: En Colombia, la independencia se consolidó en la Batalla de Boyacá (1819).</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas20">
         <button id="cerrar" onclick="cerrar_tarjetas(20)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(20)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario20" class="formulario-comentario" style="display:none;">
+  <div id="comentario20" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="20">
+            <input type="hidden" name="tarjeta" value="La Independencia de América Latina">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(20)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="21" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -218,24 +214,23 @@
         <p>Notas: Internet es uno de los principales motores de la globalización moderna.</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas21">
         <button id="cerrar" onclick="cerrar_tarjetas(21)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(21)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario21" class="formulario-comentario" style="display:none;">
+  <div id="comentario21" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="21">
+            <input type="hidden" name="tarjeta" value="Globalización">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(21)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="22" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -250,24 +245,23 @@
         <p>Notas: Funciona solo en triángulos rectángulos.</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas22">
         <button id="cerrar" onclick="cerrar_tarjetas(22)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(22)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario22" class="formulario-comentario" style="display:none;">
+  <div id="comentario22" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="22">
+            <input type="hidden" name="tarjeta" value="El teorema de pitagoras">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(22)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="23" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -282,24 +276,23 @@
         <p>Notas: La forma general de una función lineal es f(x) = mx + b.</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas23">
         <button id="cerrar" onclick="cerrar_tarjetas(23)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(23)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario23" class="formulario-comentario" style="display:none;">
+  <div id="comentario23" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="23">
+            <input type="hidden" name="tarjeta" value="Funciones Matemáticas">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(23)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="24" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -314,24 +307,23 @@
         <p>Notas: P(evento) = casos favorables / casos posibles.</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas24">
         <button id="cerrar" onclick="cerrar_tarjetas(24)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(24)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario24" class="formulario-comentario" style="display:none;">
+  <div id="comentario24" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="24">
+            <input type="hidden" name="tarjeta" value="Probabilidad">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(24)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="25" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -346,24 +338,23 @@
         <p>Notas: Usadas principalmente en poesía y literatura narrativa.</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas25">
         <button id="cerrar" onclick="cerrar_tarjetas(25)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(25)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario25" class="formulario-comentario" style="display:none;">
+  <div id="comentario25" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="25">
+            <input type="hidden" name="tarjeta" value="Figuras Literarias">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(25)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="26" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -378,24 +369,23 @@
         <p>Notas: El narrador omnisciente es el más común en novelas clásicas.</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas26">
         <button id="cerrar" onclick="cerrar_tarjetas(26)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(26)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario26" class="formulario-comentario" style="display:none;">
+  <div id="comentario26" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="26">
+            <input type="hidden" name="tarjeta" value="Tipos de Narrador">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(26)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="27" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -410,24 +400,23 @@
         <p>Notas: Grandes autores: Gustave Flaubert y Benito Pérez Galdós.</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas27">
         <button id="cerrar" onclick="cerrar_tarjetas(27)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(27)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario27" class="formulario-comentario" style="display:none;">
+  <div id="comentario27" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="27">
+            <input type="hidden" name="tarjeta" value="El Realismo Literario">
+            <input type="hidden" name="creador" value="Pepe">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(27)">Cerrar comentario</button>
     </div>
-</div>
+    </div>
 <div id="40" class="tarjeta" style="display:none;"> 
 
     <!-- PARTE 1 -->
@@ -442,26 +431,120 @@
         <p>Notas: probando</p>            
     </div>
 
-    <!-- BOTONES PARA ESTUDIANTES -->
     <div id="botones_tarjetas40">
         <button id="cerrar" onclick="cerrar_tarjetas(40)">Cerrar</button>
         <button id="comentar" class="comentar" onclick="comentar_tarjeta(40)">Comentar</button>
     </div>
 
-    <!-- FORMULARIO COMENTARIO -->
-    <div id="comentario40" class="formulario-comentario" style="display:none;">
+  <div id="comentario40" class="formulario-comentario" style="display:none;">
         <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
             <p>Escribe tu comentario:</p>
             <textarea name="comentario" rows="4" required></textarea>
-            <input type="hidden" name="id" value="40">
+            <input type="hidden" name="tarjeta" value="targeta de prueba">
+            <input type="hidden" name="creador" value="Gerardo de Jesus Sanchez Cano">
             <input type="hidden" name="rol" value="ALUMNO">
             <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
         </form>
         <button class="cerrar-form" onclick="cerrar_comentario(40)">Cerrar comentario</button>
     </div>
-</div>          </div>
+    </div>
+<div id="49" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte149" class="parte1">
+        <h2>vfvf</h2>
+        <img id="imagen" src="https://lms.colempresarial.edu.co/pluginfile.php/1/theme_academi/logo/1746822750/EMPRENEGRO.png" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte249" class="parte2">
+        <p>vfvf</p>
+        <p>Notas: vfv</p>            
+    </div>
+
+    <div id="botones_tarjetas49">
+        <button id="cerrar" onclick="cerrar_tarjetas(49)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(49)">Comentar</button>
+    </div>
+
+  <div id="comentario49" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="tarjeta" value="vfvf">
+            <input type="hidden" name="creador" value="David Arango Valencia">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(49)">Cerrar comentario</button>
+    </div>
+    </div>
+<div id="50" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte150" class="parte1">
+        <h2>YOTOMO TINTO</h2>
+        <img id="imagen" src="http://127.0.0.1/proyecto_grado/clse/img/image.png" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte250" class="parte2">
+        <p>ttt</p>
+        <p>Notas: t4t4t4</p>            
+    </div>
+
+    <div id="botones_tarjetas50">
+        <button id="cerrar" onclick="cerrar_tarjetas(50)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(50)">Comentar</button>
+    </div>
+
+  <div id="comentario50" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="tarjeta" value="YOTOMO TINTO">
+            <input type="hidden" name="creador" value="David Arango Valencia">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(50)">Cerrar comentario</button>
+    </div>
+    </div>
+<div id="51" class="tarjeta" style="display:none;"> 
+
+    <!-- PARTE 1 -->
+    <div id="parte151" class="parte1">
+        <h2>GGR</h2>
+        <img id="imagen" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSEhIWFRUVFxgVFxgWFRcYGBUXFxUYFxgXGBcdHSgiGB8lHRgVIjEiJSkrLi4uFx8/ODMwNygtLisBCgoKDg0OFw8QFysdHx0rLS0tLSstKy0rLSstKy0tLS0tLSstLS0rLS0tLS0rKystKystKy0tLS0rLS4tLTcrLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAABgEFAwQHAgj/xABUEAACAQMCBAMFBAIKDggHAAABAgMABBESIQUGEzEiQVEUMmFxkQcjQoFSoRckMzVTYnOCkrEVFjRDVFVydJSys8HR0giToqPC0+HwY2SElbTD1P/EABsBAQEBAQEBAQEAAAAAAAAAAAABAgMEBgUH/8QAJREBAAMAAQQBAwUAAAAAAAAAAAECEQMEEiExUQUTMiIzQXGR/9oADAMBAAIRAxEAPwDt3THoPoKOmPQfQV6ooPPTHoPoKOmPQfQVNBNBHTHoPoKCg9B9BVdxTj1tb4E88cZb3VZhrb/JT3m/IGq9eZXkx7PY3UgPZ3RbdPmesyvj5IaBg0D0H0FGkeg+lL8dxxRs/te0iHlqnllJ+YWJQPqaymHiR/v1ovw6Ep/X1RU0Xekego0D0H0qiKcTH4rN/mk0f69TV4HE+IICZbBHx/g9yrEj10yrHj5ZpoYNA9B9BU9Meg+gpfHOFum1wJbU+ZuYmjQZ2x1t4j/Tq+imVgGVgwO4IOQR6gjvTR66Y9B9BR0x6D6Cpqao89Meg+go6Y9B9BXqig89Meg+go6Y9B9BXqig89Meg+go0D0H0FSa8PIAMkgD1JwPrU0eumPQfQUdMeg+gqjm5wsVJUXMbsDgrFmZgfQrGGIrGvN8JOFgvW+VjcqPqyCqGDpj0H0FHTHoPoKo/wC2M/4Fef8AUr/z14fmyNfft71f/orhv1ojUF/0x6D6Cjpj0H0FU" alt="">          
+    </div>
+
+    <!-- PARTE 2 -->
+    <div id="parte251" class="parte2">
+        <p>GRGRG</p>
+        <p>Notas: RGR</p>            
+    </div>
+
+    <div id="botones_tarjetas51">
+        <button id="cerrar" onclick="cerrar_tarjetas(51)">Cerrar</button>
+        <button id="comentar" class="comentar" onclick="comentar_tarjeta(51)">Comentar</button>
+    </div>
+
+  <div id="comentario51" class="formulario-comentario" style="display:none;">
+        <form action="../FUNCIONES/comentar.php" method="POST" name="comentar">
+            <p>Escribe tu comentario:</p>
+            <textarea name="comentario" rows="4" required></textarea>
+            <input type="hidden" name="tarjeta" value="GGR">
+            <input type="hidden" name="creador" value="David Arango Valencia">
+            <input type="hidden" name="rol" value="ALUMNO">
+            <input type="submit" class="botonn" name="comentar" value="Publicar comentario">
+        </form>
+        <button class="cerrar-form" onclick="cerrar_comentario(51)">Cerrar comentario</button>
+    </div>
+    </div>          </div>
           </div>
         </section>
+
+
 </body>
 <script src="../FUNCIONES/mostrar.js"></script>
 
