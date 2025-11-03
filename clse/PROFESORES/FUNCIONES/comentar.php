@@ -8,7 +8,7 @@ if (isset($_POST['comentar'])) {
     $creador = mysqli_real_escape_string($conexion, $_POST["creador"]);
     $usuario = $_SESSION['name']; 
 
-    $sql = "INSERT INTO `comentarios` (`id`, `comentario`, `comentador`, `tarjeta`, `autor_tarjeta`) VALUES ('1', '$comentario', '$usuario', '$tarjeta', '$creador');";
+    $sql = "INSERT INTO `comentarios` (`comentario`, `comentador`, `tarjeta`, `autor_tarjeta`) VALUES ('$comentario', '$usuario', '$tarjeta', '$creador');";
 
     $resultado = mysqli_query($conexion, $sql);
 
