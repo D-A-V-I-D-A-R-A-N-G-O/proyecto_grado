@@ -1,8 +1,8 @@
 <?php
 
-$dbhost = "181.133.27.242";
-$dbuser = "profesor";
-$dbpass = "PROFESOR";
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
 $dbname = "clase";
 $port = 3306;
 
